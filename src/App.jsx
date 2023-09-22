@@ -5,12 +5,14 @@ import { CookiesProvider } from 'react-cookie';
 
 //Components
 import SignUp from './components/SignUp';
+import Login from './components/Login';
 
 
 const App = () => {
   return (
     <Routes>
       <Route path='/signup' element={ <SignUp /> } />
+      <Route path='/login' element={ <Login /> } />
       <Route path='/*' element={ <Navigate to='/signup' /> } />
     </Routes>
   );

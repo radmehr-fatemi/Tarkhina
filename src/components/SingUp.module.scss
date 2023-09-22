@@ -145,3 +145,18 @@
         opacity: 1;
     }
 }
+
+
+@media ( min-width : 768px ) {
+    .signUp {
+        padding: 10% 0;
+    }
+
+    .signUpForm {
+        padding: 2rem;
+        width: 35%;
+        margin: auto;
+        border: 1px solid var(--background-buttons);
+        border-radius: 8px;
+    }
+}

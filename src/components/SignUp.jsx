@@ -62,7 +62,7 @@ const SignUp = () => {
     }
 
     return (
-        <>
+        <div className={ styled.signUp }>
             <form className={styled.signUpForm} onSubmit={submitHandler}>
 
                 <div className={styled.imageSignUp} >
@@ -145,7 +145,7 @@ const SignUp = () => {
                 </div>
             </form>
 
-        </>
+        </div>
     );
 };
 
