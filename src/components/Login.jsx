@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link ,useNavigate } from 'react-router-dom';
+import { useCookies } from 'react-cookie';
 
 //Style
 import styled from "./SingUp.module.scss";
@@ -12,6 +13,8 @@ import { validation } from './shared/validation';
 
 const Login = () => {
 
+    const [ cookies ,setCookies ] = useCookies('');
+
     const [data, setData] = useState({
         email: '',
         password: '',
@@ -19,6 +22,7 @@ const Login = () => {
 
     const [errors, setErrors] = useState({});
     const [isSelected, setIsSelected] = useState({});
+    const navigate = useNavigate();
 
     useEffect(() => {
         setErrors({ ...validation("LOGIN", data) })
@@ -41,10 +45,9 @@ const Login = () => {
                 email: true,
                 password: true,
             })
-            setIsSuccess(true)
-
         } else {
-            setIsSuccess(true)
+            setCookies( data.email ,data.password ,{ path : '/' } )
+            navigate( '/' ,{ replace : true } )
         }
     }
 

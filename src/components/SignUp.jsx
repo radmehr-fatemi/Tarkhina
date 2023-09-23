@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link ,useNavigate } from 'react-router-dom';
+import { useCookies } from 'react-cookie';
 
 //Style
 import styled from "./SingUp.module.scss";
@@ -22,7 +23,8 @@ const SignUp = () => {
 
     const [errors, setErrors] = useState({});
     const [isSelected, setIsSelected] = useState({});
-    const [isSuccess, setIsSuccess] = useState(false)
+    const [ cookies ,setCookies ,removeCookies ] = useCookies('');
+    const navigate = useNavigate();
 
     useEffect(() => {
         setErrors({ ...validation("SIGN_UP", data) })
@@ -36,7 +38,6 @@ const SignUp = () => {
         } else {
             setData({ ...data, [target.name]: target.value })
         }
-        console.log(validation("SIGN_UP", data))
     }
 
     const blurHandler = ({ target }) => {
@@ -54,10 +55,10 @@ const SignUp = () => {
                 confirmPassword: true,
                 isAccepted: true
             })
-            setIsSuccess(true)
 
         } else {
-            setIsSuccess(true)
+            setCookies( data.name ,{ email : data.email ,password : data.password } ,{ path : "/" } )
+            navigate( '/' ,{ replace : true } )
         }
     }
 
