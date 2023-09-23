@@ -1,9 +1,8 @@
-$background-color-green: #417F56;
+$background-color-green: #77c08f;
 $background-color-white: #fff;
-$text-color: #0d5a4e;
+$text-color: #68d4a4;
 
 .hamburgerMenu {
-    position: relative;
 
     img {
         width: 25px;
@@ -18,14 +17,18 @@ $text-color: #0d5a4e;
     padding: .5rem;
     width: 80vw;
     height: 100vh;
-    background-color: $background-color-white;
-    box-shadow: 4px 4px 12pc $text-color;
+    background: url(../../assets/image/background.3jpg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // box-shadow: 4px 4px 12pc $text-color;
     transition: all .3s;
     transform: translateX(110%);
     z-index: 1001;
 
     .tarkhineSvg {
         width: 100%;
+        backdrop-filter: blur(3px);
 
         a {
             width: 100%;
@@ -71,6 +74,10 @@ $text-color: #0d5a4e;
     display: flex;
     justify-content: flex-end;
     backdrop-filter: blur(10px);
+    background: url(../../assets/image/background.3jpg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     transform: translateX(-100%);
     height: 100vh;
     z-index: 1000;
@@ -81,8 +88,8 @@ $text-color: #0d5a4e;
         padding: 0;
         display: block;
     }
-
 }
+
 //------------keyframes------------------
 @keyframes ShowBurger {
     0% {
