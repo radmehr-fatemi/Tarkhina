@@ -1,15 +1,146 @@
+$background-color-green: #417F56;
+$background-color-white: #fff;
+$text-color: #0d5a4e;
+
 .hamburgerMenu {
-    
+    position: relative;
+
     img {
         width: 25px;
-        // margin-left: 14vw;
+    }
+}
+
+//-------------hamburgerMenuItems---------------
+.hamburgerMenuItems {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: .5rem;
+    width: 80vw;
+    height: 100vh;
+    background-color: $background-color-white;
+    box-shadow: 4px 4px 12pc $text-color;
+    transition: all .3s;
+    transform: translateX(110%);
+    z-index: 1001;
+
+    .tarkhineSvg {
+        width: 100%;
+
+        a {
+            width: 100%;
+            text-align: center;
+        }
+
+        img {
+            width: 80%;
+            padding: 0 2rem 1rem 3rem;
+        }
+    }
+
+    ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: space-between;
+    }
+
+    a {
+        text-decoration: none;
+        color: $text-color;
+        padding: .8rem 0;
+        display: block;
+        border-bottom: 1px solid $background-color-green;
+
+        &:hover {
+            color: rgb(5, 146, 99);
+            transition: all .3s;
+        }
+    }
+}
+
+//-----------hamburgerCross-------------
+.hamburgerCross {
+    position: fixed;
+    top: 0rem;
+    left: 0rem;
+    display: block;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    backdrop-filter: blur(10px);
+    transform: translateX(-100%);
+    height: 100vh;
+    z-index: 1000;
+    
+    img {
+        width: 80px;
+        height: 70px;
+        padding: 0;
+        display: block;
     }
 
 }
+//------------keyframes------------------
+@keyframes ShowBurger {
+    0% {
+        transform: translateX(110%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+@keyframes UnShowBurger {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(110%);
+    }
+}
 
 
-@media( min-width : 768px ) {
-    
+@keyframes ShowCross {
+    0% {
+        transform: translateX(-110%);
+    }
+
+    100% {
+        transform: translateX(-0%);
+    }
+}
+@keyframes UnShowCross {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-110%);
+    }
+}
+
+//------------showBurger AND showCross---------
+#showBurger {
+    animation: ShowBurger .5s forwards;
+}
+#unShowBurger {
+    animation: UnShowBurger .5s forwards;
+}
+
+#showCross {
+    animation: ShowCross .3s forwards;
+}
+#unShowCross {
+    animation: UnShowCross .3s forwards;
+}
+
+//---------------778px-----------------------
+@media(min-width : 768px) {
+
     .hamburgerMenu {
         display: none;
     }

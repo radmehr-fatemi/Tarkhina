@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import styled from "./Navbar.module.scss";
 
 //SVG
-import tarkhineSVG from "../../assets/login/tarkhine.svg";
+import tarkhineSVG from "../../assets/tarkhina.svg";
 import userSVG from "../../assets/user.svg";
 import cartSVG from "../../assets/cart.svg";
 import arrowDownSVG from "../../assets/arrow-down.svg";
