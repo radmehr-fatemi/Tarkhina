@@ -1,0 +1,16 @@
+.hamburgerMenu {
+    
+    img {
+        width: 25px;
+        // margin-left: 14vw;
+    }
+
+}
+
+
+@media( min-width : 768px ) {
+    
+    .hamburgerMenu {
+        display: none;
+    }
+}

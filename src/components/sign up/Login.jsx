@@ -6,10 +6,10 @@ import { useCookies } from 'react-cookie';
 import styled from "./SingUp.module.scss";
 
 //SVG
-import tarkhineSVG from "../assets/login/tarkhine.svg";
+import tarkhineSVG from "../../assets/login/tarkhine.svg";
 
 //validation
-import { validation } from './shared/validation';
+import { validation } from '../shared/validation';
 
 const Login = () => {
 
