@@ -1,6 +1,7 @@
 $text-color-white: #ffffff;
-$textShadow-color:#000000;
+$textShadow-color: #000000;
 
+//------------homPageChain---------------
 .homPageChain {
     width: 100vw;
     margin-top: 2rem;
@@ -10,61 +11,68 @@ $textShadow-color:#000000;
     background-size: cover;
 }
 
+//------------homPageChainFilter----------------
 .homPageChainFilter {
     backdrop-filter: brightness(.33);
 }
 
+//----------homPageChainContainer---------------------
 .homPageChainContainer {
     padding: 1rem;
-    
-    .homPageChainTitre {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
+}
 
-        h1 {
-            font-size: 1rem;
-            font-weight: 100;
-            color: $text-color-white;
-        }
+//-----------homPageChainTitre------------
+.homPageChainTitre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 
-        p {
-            width: 100%;
-            font-size: .8rem;
-            font-weight: 100;
-            line-height: 1.4rem;
-            color: $text-color-white;
-            padding: .5rem 0;
-        }
+    h1 {
+        font-size: 1rem;
+        font-weight: 100;
+        color: $text-color-white;
     }
 
-    .homPageChainMore {
-        display: flex;
-        justify-content: flex-end;
-
-
-        a {
-            width: 46%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            text-decoration: none;
-            color: $text-color-white;
-            padding: .2rem 1rem .2rem .2rem;
-            margin-top: .4rem;
-            border: 1px solid $text-color-white;
-            border-radius: 8px;
-        }
-
-        img {
-            width: 18%;
-        }
+    p {
+        width: 100%;
+        font-size: .8rem;
+        font-weight: 100;
+        line-height: 1.4rem;
+        text-align: start;
+        color: $text-color-white;
+        padding: .5rem 0;
     }
 }
 
+//-------------homPageChainMore------------
+.homPageChainMore {
+    display: flex;
+    justify-content: flex-end;
+
+
+    a {
+        width: 180px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-decoration: none;
+        color: $text-color-white;
+        padding: .2rem 1rem .2rem .2rem;
+        margin-top: .4rem;
+        border: 1px solid $text-color-white;
+        border-radius: 8px;
+    }
+
+    img {
+        width: 18%;
+    }
+}
+
+//-------------homPageChainItems-------------
 .homPageChainItems {
-width: 100%;
+    width: 100%;
+
     ul {
         list-style-type: none;
         display: flex;
@@ -72,7 +80,7 @@ width: 100%;
         justify-content: center;
         align-content: space-between;
     }
-    
+
     li {
         color: $text-color-white;
         display: flex;
@@ -82,9 +90,77 @@ width: 100%;
         width: 180px;
         height: 80px;
     }
-    
+
     img {
         width: 20px;
     }
+}
 
+//-------------------768px--------------------
+@media ( min-width : 768px ) {
+    
+    .homPageChainFilter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .homPageChainContainer {
+        width: 60%;
+        // height: 320px;
+        padding: 0 2rem;
+    }
+
+    .homPageChainTitre {
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.9rem;
+        }
+    }
+
+    .homPageChainMore {
+        a {
+            width: 200px;
+        }
+    }
+
+    .homPageChainItems {
+        width: 40%;
+
+        li {
+            height: 200px;
+            width: 300px;
+            font-size: 1.2rem;
+        }
+
+        img {
+            width: 50px;
+        }
+    }
+}
+
+//---------------768px AND 1180px---------------
+@media ( min-width : 768px ) and ( max-width : 1180px ) {
+    
+    .homPageChainContainer {
+        width: 50%;
+    }
+    
+    .homPageChainItems {
+
+        li {
+            width: 150px;
+            font-size: 1rem;
+        }
+
+        img {
+            width: 40px;
+        }
+    }
 }

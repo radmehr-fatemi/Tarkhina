@@ -4,11 +4,15 @@ $border-color: #069f88;
 
 //----------navbar---------------
 .navbar {
+    position: sticky;
+    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: .8rem;
+    background-color: #fff;
     animation:  Show .3s;
+    z-index: 1000;
 }
 
 //-------------tarkhineSvg----------------

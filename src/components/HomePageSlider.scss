@@ -3,13 +3,13 @@ $text-color-white: #fff;
 //-------------homePageSlider----------------
 .homePageSlider {
     width: 100%;
-    height: 25vh;
+    height: 200px;
 
     a {
       position: relative;
       text-decoration: none;
       color: $text-color-white;
-      width: 100vh;
+      width: 100vw;
       height: 100%;
       display: block;
     }

@@ -4,7 +4,7 @@ import React from 'react';
 import style from "./HomePage.module.scss";
 
 //SVG
-import searchSVG from "../assets/svg/search.svg";
+import searchSVG from "../assets/svg/searchHome.svg";
 
 //Components
 import HomePageSlider from './HomePageSlider';
