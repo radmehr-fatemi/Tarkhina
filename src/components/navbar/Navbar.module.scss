@@ -1,4 +1,6 @@
 $background-color-green: #417F56;
+$background-color-white: #fff;
+$boxShadow-color: #dcdcdc;
 $text-color: #027161;
 $border-color: #069f88;
 
@@ -10,7 +12,8 @@ $border-color: #069f88;
     justify-content: space-between;
     align-items: center;
     padding: .8rem;
-    background-color: #fff;
+    background-color: $background-color-white;
+    box-shadow: 0 .1px 4px $boxShadow-color;
     animation:  Show .3s;
     z-index: 1000;
 }
@@ -63,7 +66,8 @@ $border-color: #069f88;
 //-----------navbarMenuItems--------------
 .navbarMenuItems {
     display: none;
-
+    width: 45%;
+    
     img {
         width: 20px;
         transition: all .3s;
@@ -83,7 +87,7 @@ $border-color: #069f88;
     li {
         display: flex;
         align-items: center;
-        margin-left: 1.5rem;
+        // margin-left: .5rem;
 
     }
 
@@ -126,7 +130,7 @@ $border-color: #069f88;
     }
 
     .navbarIcons {
-        width: 10%;
+        width: 130px;
 
         a {
             &:nth-child(1) {
@@ -153,15 +157,24 @@ $border-color: #069f88;
 //------------768px AND 1180px-----------------
 @media (min-width : 768px) and ( max-width : 1180px ) {
 
+    .navbar {
+        padding: .8rem .5rem;
+    }
+    
+    .tarkhineSvg {
+        width: 18%;
+    }
+
     .navbarMenuItems {
-        
+
+        // width: 0%;
         a {
             font-size: .8rem;
         }
     }
 
     .navbarIcons {
-        width: 12%;
+        width: 100px;
 
         img {
             padding: 12%;
