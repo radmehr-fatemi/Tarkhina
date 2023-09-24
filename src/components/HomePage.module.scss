@@ -1,0 +1,115 @@
+$background-color-green: #66a57b;
+$background-color-white: #fff;
+$text-color: #003a2f;
+$border-color : #77ad95;
+$boxShadow-color: #22473f;
+
+//------------homePage----------------
+.homePage {
+    text-align: center;
+}
+
+//------------homePageInputSearch-----------------
+.homePageInputSearch {
+    width: 80%;
+    margin: .5rem auto;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    display: block;
+
+    input {
+        width: 80%;
+        border: none;
+        padding: .3rem;
+
+        &:focus {
+            outline: none;
+        }
+
+        &::placeholder {
+            color: #98aca3;
+        }
+    }
+
+    img {
+        width: 18px;
+    }
+}
+
+//--------------homePageMenu----------------
+.homePageMenu {
+    padding-top: 1rem;
+
+    h1 {
+        color: $text-color;
+        font-size: 1.4rem;
+    }
+
+    ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    li {
+        background-color: $background-color-green;
+        height: 20vh;
+        width: 150px;
+        border-radius: 8px;
+        margin: 1.2rem 1rem;
+    }
+
+    a {
+        background-color: $background-color-white;
+        height: 50%;
+        display: block;
+        text-decoration: none;
+        color: $text-color;
+    }
+
+    img {
+        filter: drop-shadow(2px 2px 4px $boxShadow-color);
+    }
+
+    p {
+        width: 70%;
+        margin: auto;
+        margin-top: -18px;
+        padding: .3rem .5rem;
+        border-radius: 8px;
+        background-color: $background-color-white;
+        box-shadow: 2px 2px 4px $boxShadow-color;
+        transition: all .3s;
+
+        &:hover {
+            width: 60%;
+            font-size: 1.1rem;
+            transition: all .3s;
+        }
+    }
+}
+
+//---------------768px-------------------
+@media (min-width : 768px) {
+
+    .homePageInputSearch {
+        display: none;
+    }
+
+    .homePageMenu {
+
+        li {
+            width: 200px;
+            margin: 1.2rem 2rem;
+        }
+
+        p {
+            margin-top: -10px;
+        }
+    }
+}
