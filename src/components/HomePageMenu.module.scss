@@ -1,0 +1,96 @@
+$background-color-green: #66a57b;
+$background-color-white: #fff;
+$text-color: #003a2f;
+$border-color : #779c8c;
+$boxShadow-color: #22473f;
+
+//--------------homePageMenu----------------
+.homePageMenu {
+    padding-top: 1rem;
+
+    h1 {
+        color: $text-color;
+        font-size: 1.4rem;
+    }
+
+    ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    li {
+        background-color: $background-color-green;
+        height: 120px;
+        width: 150px;
+        border-radius: 8px;
+        margin: 1.2rem .8rem;
+    }
+
+    a {
+        background-color: $background-color-white;
+        height: 50%;
+        display: block;
+        text-decoration: none;
+        color: $text-color;
+    }
+
+    img {
+        width: 120px;
+        height: 120px;
+        filter: drop-shadow(0px 2px 4px $boxShadow-color);
+    }
+
+    p {
+        width: 70%;
+        margin: auto;
+        margin-top: -18px;
+        padding: .3rem .5rem;
+        border-radius: 8px;
+        background-color: $background-color-white;
+        box-shadow: 2px 2px 4px $boxShadow-color;
+        transition: all .3s;
+
+    }
+}
+
+//---------------768px-------------------
+@media (min-width : 768px) {
+
+    .homePageMenu {
+
+        li {
+            width: 200px;
+            height: 150px;
+            margin: 1.2rem 2rem;
+        }
+
+        img {
+            width: 140px;
+            height: 140px;
+        }
+
+        p {
+            margin-top: -10px;
+
+            &:hover {
+                width: 60%;
+                font-size: 1.1rem;
+                transition: all .3s;
+            }
+        }
+    }
+}
+
+//--------------768px AND 1180px----------------------
+@media (min-width : 768px) and (max-width : 1180px) {
+
+    .homePageMenu {
+
+        p {
+            margin-top: -18px;
+        }
+    }
+}

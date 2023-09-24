@@ -1,7 +1,7 @@
 $background-color-green: #66a57b;
 $background-color-white: #fff;
 $text-color: #003a2f;
-$border-color : #77ad95;
+$border-color : #779c8c;
 $boxShadow-color: #22473f;
 
 //------------homePage----------------
@@ -12,7 +12,7 @@ $boxShadow-color: #22473f;
 //------------homePageInputSearch-----------------
 .homePageInputSearch {
     width: 80%;
-    margin: .5rem auto;
+    margin: 1rem auto;
     border: 1px solid $border-color;
     border-radius: 4px;
     display: flex;
@@ -22,7 +22,7 @@ $boxShadow-color: #22473f;
     input {
         width: 80%;
         border: none;
-        padding: .3rem;
+        padding: .4rem;
 
         &:focus {
             outline: none;
@@ -35,58 +35,6 @@ $boxShadow-color: #22473f;
 
     img {
         width: 18px;
-    }
-}
-
-//--------------homePageMenu----------------
-.homePageMenu {
-    padding-top: 1rem;
-
-    h1 {
-        color: $text-color;
-        font-size: 1.4rem;
-    }
-
-    ul {
-        list-style-type: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-
-    li {
-        background-color: $background-color-green;
-        height: 120px;
-        width: 150px;
-        border-radius: 8px;
-        margin: 1.2rem .8rem;
-    }
-
-    a {
-        background-color: $background-color-white;
-        height: 50%;
-        display: block;
-        text-decoration: none;
-        color: $text-color;
-    }
-
-    img {
-        width: 120px;
-        height: 120px;
-        filter: drop-shadow(2px 2px 4px $boxShadow-color);
-    }
-
-    p {
-        width: 70%;
-        margin: auto;
-        margin-top: -18px;
-        padding: .3rem .5rem;
-        border-radius: 8px;
-        background-color: $background-color-white;
-        box-shadow: 2px 2px 4px $boxShadow-color;
-        transition: all .3s;
-
     }
 }
 

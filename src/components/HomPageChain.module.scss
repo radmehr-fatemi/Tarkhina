@@ -1,0 +1,90 @@
+$text-color-white: #ffffff;
+$textShadow-color:#000000;
+
+.homPageChain {
+    width: 100vw;
+    margin-top: 2rem;
+    background: url(../assets/image/menu/backgroundOne.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.homPageChainFilter {
+    backdrop-filter: brightness(.33);
+}
+
+.homPageChainContainer {
+    padding: 1rem;
+    
+    .homPageChainTitre {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        h1 {
+            font-size: 1rem;
+            font-weight: 100;
+            color: $text-color-white;
+        }
+
+        p {
+            width: 100%;
+            font-size: .8rem;
+            font-weight: 100;
+            line-height: 1.4rem;
+            color: $text-color-white;
+            padding: .5rem 0;
+        }
+    }
+
+    .homPageChainMore {
+        display: flex;
+        justify-content: flex-end;
+
+
+        a {
+            width: 46%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-decoration: none;
+            color: $text-color-white;
+            padding: .2rem 1rem .2rem .2rem;
+            margin-top: .4rem;
+            border: 1px solid $text-color-white;
+            border-radius: 8px;
+        }
+
+        img {
+            width: 18%;
+        }
+    }
+}
+
+.homPageChainItems {
+width: 100%;
+    ul {
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: space-between;
+    }
+    
+    li {
+        color: $text-color-white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 180px;
+        height: 80px;
+    }
+    
+    img {
+        width: 20px;
+    }
+
+}
