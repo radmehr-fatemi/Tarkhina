@@ -1,23 +1,28 @@
 $background-color-green: #417F56;
-$text-color: #53817a;
+$text-color: #027161;
+$border-color: #069f88;
 
+//----------navbar---------------
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: .8rem;
+    animation:  Show .3s;
 }
 
+//-------------tarkhineSvg----------------
 .tarkhineSvg {
     width: 43%;
     text-align: center;
-
+    
     img {
-        width: 60%;
+        width: 70%;
         margin-right: 2rem;
     }
 }
 
+//-------------navbarIcons-------------
 .navbarIcons {
     display: flex;
     justify-content: space-between;
@@ -46,15 +51,22 @@ $text-color: #53817a;
     }
 }
 
+//-----------hamburgerMenuField----------
 .hamburgerMenuField {
     display: block;
 }
 
+//-----------navbarMenuItems--------------
 .navbarMenuItems {
     display: none;
 
     img {
         width: 20px;
+        transition: all .3s;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     ul {
@@ -78,13 +90,27 @@ $text-color: #53817a;
         transition: all .3s;
 
         &:hover {
-            color: rgb(49, 151, 98);
+            color: $border-color;
+            box-shadow: 0 2px 0 $border-color ;
+            padding: 0 .5rem;
             transition: all .3s;
         }
 
     }
 }
 
+//------------------keyframes------------------
+@keyframes Show {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+//--------------768px-----------------
 @media (min-width : 768px) {
 
     .navbar {
@@ -117,5 +143,24 @@ $text-color: #53817a;
 
     .navbarMenuItems {
         display: block;
+    }
+}
+
+//------------768px AND 1180px-----------------
+@media (min-width : 768px) and ( max-width : 1180px ) {
+
+    .navbarMenuItems {
+        
+        a {
+            font-size: .8rem;
+        }
+    }
+
+    .navbarIcons {
+        width: 12%;
+
+        img {
+            padding: 12%;
+        }
     }
 }

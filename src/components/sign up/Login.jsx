@@ -46,7 +46,7 @@ const Login = () => {
                 password: true,
             })
         } else {
-            setCookies( data.email ,data.password ,{ path : '/' } )
+            setCookies( "user" ,{ email : data.email ,password : data.password } ,{ path : "/" } )
             navigate( '/' ,{ replace : true } )
         }
     }

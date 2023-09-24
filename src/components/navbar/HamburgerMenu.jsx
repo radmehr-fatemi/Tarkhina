@@ -1,5 +1,6 @@
 import React ,{ useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useCookies } from 'react-cookie';
 
 //Style
 import styled from "./HamburgerMenu.module.scss";
@@ -12,6 +13,7 @@ import crossSVG from "../../assets/cross.svg";
 const HamburgerMenu = () => {
 
     const [ isBurgerSelected ,setIsBurgerSelected ] = useState(false)
+    const [ , , removeCookie ] = useCookies();
 
     const burgerHandler = () => {
         setIsBurgerSelected( !isBurgerSelected )
@@ -41,6 +43,8 @@ const HamburgerMenu = () => {
                     <li><Link to='/deputize' > اعطای نمایندگی </Link></li>
                     <li><Link to='/aboutus' > درباره ما </Link></li>
                     <li><Link to='/contactus' > تماس با ما </Link></li>
+
+                    <li><Link onClick={ () => removeCookie("user") } to='/' > خروج از حساب کاربری </Link></li>
                 </ul>
 
             </div>

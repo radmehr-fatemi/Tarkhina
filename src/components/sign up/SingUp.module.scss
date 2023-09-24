@@ -1,13 +1,15 @@
 :root {
     --background-buttons: rgb(40, 180, 120);
-    --background-button-hove:rgb(17, 213, 138); 
+    --background-button-hove: rgb(17, 213, 138);
 }
 
+//------------signUpForm----------------
 .signUpForm {
     padding: 1rem;
     padding-top: 40%;
     display: flex;
     flex-direction: column;
+    animation: Show .3s;
 
     label {
         color: #044c48;
@@ -33,6 +35,7 @@
     }
 }
 
+//-----------imageSignUp---------------
 .imageSignUp {
     margin: auto;
 
@@ -41,6 +44,7 @@
     }
 }
 
+//------------inputSignUp---------------
 .inputSignUp {
     display: flex;
     flex-direction: column;
@@ -53,11 +57,12 @@
         text-shadow: 2px 2px 4px rgb(255, 0, 0);
         font-size: .5rem;
         padding: 2px;
-        animation: ShowInvalid .3s;
+        animation: Show .3s;
     }
 
 }
 
+//-------------checkboxSignUp----------------
 .checkboxSignUp {
     display: flex;
     align-items: center;
@@ -78,7 +83,7 @@
         color: rgb(255, 6, 6);
         text-shadow: 2px 2px 4px rgb(255, 0, 0);
         font-size: .7rem;
-        animation: ShowInvalid .3s;
+        animation: Show .3s;
     }
 
     input {
@@ -96,6 +101,7 @@
     }
 }
 
+//------------buttonSignUp----------------
 .buttonSignUp {
     display: flex;
     justify-content: space-between;
@@ -123,21 +129,22 @@
         font-size: 1.4rem;
         font-weight: 600;
         color: var(--background-buttons);
-        box-shadow: 0px 2px 0px var(--background-buttons);
+        border: solid 2px #fff;
+        border-bottom: 2px solid var(--background-buttons);
         padding: 0 .5rem;
         transition: all .3s;
         cursor: pointer;
 
         &:hover {
             color: var(--background-button-hove);
-            box-shadow: 0px 2px 0px var(--background-button-hove);
+            border-bottom: 2px solid var(--background-button-hove);
             transition: all .3s;
         }
     }
 }
 
-
-@keyframes ShowInvalid {
+//-------------Keyframes----------------
+@keyframes Show {
     0% {
         opacity: 0;
     }
@@ -147,8 +154,8 @@
     }
 }
 
-
-@media ( min-width : 768px ) {
+//------------------768px-----------------------
+@media (min-width : 768px) {
     .signUp {
         padding: 10% 0;
     }
@@ -161,4 +168,3 @@
         border-radius: 8px;
     }
 }
-

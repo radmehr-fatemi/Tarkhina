@@ -57,7 +57,7 @@ const SignUp = () => {
             })
 
         } else {
-            setCookies( data.name ,{ email : data.email ,password : data.password } ,{ path : "/" } )
+            setCookies( "user" ,{ name : data.name ,email : data.email ,password : data.password } ,{ path : "/" } )
             navigate( '/' ,{ replace : true } )
         }
     }
