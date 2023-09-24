@@ -6,9 +6,9 @@ import { useCookies } from 'react-cookie';
 import styled from "./HamburgerMenu.module.scss";
 
 //SVG
-import hamburgerMenuSVG from "../../assets/hamburger-menu.svg";
-import tarkhineSVG from "../../assets/tarkhina.svg";
-import crossSVG from "../../assets/cross.svg";
+import hamburgerMenuSVG from "../../assets/svg/hamburger-menu.svg";
+import tarkhineSVG from "../../assets/svg/tarkhina.svg";
+import crossSVG from "../../assets/svg/cross.svg";
 
 const HamburgerMenu = () => {
 

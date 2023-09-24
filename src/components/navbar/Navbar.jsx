@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 import styled from "./Navbar.module.scss";
 
 //SVG
-import tarkhineSVG from "../../assets/tarkhina.svg";
-import userSVG from "../../assets/user.svg";
-import cartSVG from "../../assets/cart.svg";
-import arrowDownSVG from "../../assets/arrow-down.svg";
-import searchSVG from "../../assets/search.svg";
+import tarkhineSVG from "../../assets/svg/tarkhina.svg";
+import userSVG from "../../assets/svg/user.svg";
+import cartSVG from "../../assets/svg/cart.svg";
+import arrowDownSVG from "../../assets/svg/arrow-down.svg";
+import searchSVG from "../../assets/svg/search.svg";
 
 //Components
 import HamburgerMenu from './HamburgerMenu';

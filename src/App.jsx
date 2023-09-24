@@ -15,15 +15,14 @@ const App = () => {
   const [cookies] = useCookies();
   const navigate = useNavigate();
 
-  useEffect( () => {
-
+  useEffect(() => {
     !Object.keys(cookies).length && navigate("/signup", { replace: true })
-    console.log(Object.keys(cookies).length)
-  } ,[cookies])
+
+  }, [cookies])
 
   return (
     <>
-     {!!Object.keys(cookies).length && <Navbar />}
+      {!!Object.keys(cookies).length && <Navbar />}
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/signup' element={<SignUp />} />
