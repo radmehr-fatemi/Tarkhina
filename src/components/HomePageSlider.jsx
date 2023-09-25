@@ -33,7 +33,7 @@ export default function HomePageSlider() {
           "--swiper-pagination-color": "#66a57b",
           "--swiper-pagination-bullet-inactive-color": "#999999",
           "--swiper-pagination-bullet-inactive-opacity": "1",
-          "--swiper-pagination-bullet-size": "9px",
+          "--swiper-pagination-bullet-size": "8px",
           "--swiper-pagination-bullet-horizontal-gap": "6px",
       }}
         // navigation={true}
