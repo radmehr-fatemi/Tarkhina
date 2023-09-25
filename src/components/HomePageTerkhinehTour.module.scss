@@ -1,7 +1,6 @@
 $text-color: #003a2f;
 $text-colorTwo: #506965;
 $border-color : #cecece;
-$border-hover-color: #8f8f8f;
 
 .homePageTerkhinehTour {
     width: 100vw;
@@ -28,21 +27,16 @@ $border-hover-color: #8f8f8f;
     align-items: center;
     text-decoration: none;
     color: $text-color;
-    border: 1px solid $border-color;
-    border-radius: 6px;
     margin: .5rem 0;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    overflow: hidden;
     transition: all .3s;
-
-    &:hover {
-        border: 1px solid $border-hover-color;
-        transition: all .3s;
-    }
 
     div {
         &:nth-child(1) {
             width: 46%;
             height: 100%;
-            // overflow: hidden;
 
             img {
                 height: 100%;
@@ -53,15 +47,18 @@ $border-hover-color: #8f8f8f;
 
         &:nth-child(2) {
             width: 60%;
+            height: 100%;
+            padding: .5rem .2rem;
+
 
             h2 {
                 font-size: 1.1rem;
-                margin-bottom: .6rem;
+                margin-bottom: .4rem;
             }
 
             span {
                 padding: .2rem;
-                font-size: .9rem;
+                font-size: .8rem;
                 color: $text-colorTwo;
             }
         }

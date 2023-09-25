@@ -11,6 +11,7 @@ import HomePageSlider from './HomePageSlider';
 import HomePageMenu from './HomePageMenu';
 import HomPageChain from './HomPageChain';
 import HomePageTerkhinehTour from './HomePageTerkhinehTour';
+import HomePageFooter from './HomePageFooter';
 
 const HomePage = () => {
     return (
@@ -27,6 +28,7 @@ const HomePage = () => {
             <HomePageMenu />
             <HomPageChain />
             <HomePageTerkhinehTour />
+            <HomePageFooter />
         </div>
     );
 };

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 
 //Style
@@ -15,6 +15,7 @@ import searchSVG from "../../assets/svg/search.svg";
 import HamburgerMenu from './HamburgerMenu';
 
 const Navbar = () => {
+
     return (
         <div className={styled.navbar} >
 
@@ -31,10 +32,12 @@ const Navbar = () => {
 
             <div className={styled.navbarMenuItems}>
                 <ul>
-                    <li><Link to='/' > صفحه اصلی </Link></li>
+                    <li>
+                        <Link to='/' >صفحه اصلی</Link>
+                    </li>
 
                     <li>
-                        <Link to='/' > شعبه</Link>
+                        <Link to='/branch' > شعبه</Link>
                         <img src={arrowDownSVG} alt="arrow down" />
                     </li>
 

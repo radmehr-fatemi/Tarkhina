@@ -71,10 +71,7 @@ $border-color: #069f88;
     img {
         width: 20px;
         transition: all .3s;
-
-        &:hover {
             cursor: pointer;
-        }
     }
 
     ul {
@@ -87,7 +84,6 @@ $border-color: #069f88;
     li {
         display: flex;
         align-items: center;
-        // margin-left: .5rem;
 
     }
 
@@ -106,6 +102,15 @@ $border-color: #069f88;
 
     }
 }
+
+//--------------#navbarIconsAdd-------------
+#navbarIconsAdd {
+    color: $border-color;
+    box-shadow: 0 2px 0 $border-color ;
+    padding: 0 .5rem;
+    font-weight: bolder;
+}
+
 
 //------------------keyframes------------------
 @keyframes Show {
