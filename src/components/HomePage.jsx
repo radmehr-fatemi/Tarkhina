@@ -13,16 +13,18 @@ import HomPageChain from './HomPageChain';
 
 const HomePage = () => {
     return (
-        <div className={ style.homePage } >
+        <div className={style.homePage} >
             <HomePageSlider />
 
-            <div className={ style.homePageInputSearch } >
-                <input type="text" placeholder=' جست و جو ' />
-                <img src={ searchSVG } alt="" />
+            <div className={ style.homePageSearch }>
+                <div className={style.homePageInputSearch} >
+                    <input type="text" placeholder=' جست و جو ' />
+                    <img src={searchSVG} alt="" />
+                </div>
             </div>
 
             <HomePageMenu />
-            <HomPageChain />          
+            <HomPageChain />
         </div>
     );
 };

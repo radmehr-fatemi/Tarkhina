@@ -3,7 +3,7 @@ $text-color-white: #fff;
 //-------------homePageSlider----------------
 .homePageSlider {
     width: 100%;
-    height: 200px;
+    height: 200px;    
 
     a {
       position: relative;
@@ -17,7 +17,8 @@ $text-color-white: #fff;
     img {
       width: 100%;
       height: 100%;
-      filter: blur(1.2px);
+      // filter: blur(1.2px);
+      // clip-path: polygon(100% 0%, 0% 0%, 0% 100%, 34% 100%, 37% 92%, 45% 88%, 59% 89%, 65% 95%, 65% 100%, 100% 100%);
     }
 
     p {
@@ -37,6 +38,7 @@ $text-color-white: #fff;
     .swiper {
       width: 100%;
       height: 100%;
+
     }
     .swiper-slide {
       /* Center slide text vertically */
@@ -44,14 +46,20 @@ $text-color-white: #fff;
       // justify-content: space-evenly;
       align-items: center;
     }
-    
-    // .swiper-slide img {
-    //   display: block;
-    //   width: 100%;
-    //   height: 100%;
-    //   object-fit: cover;
-    // }
   }
+
+  .swiper-pagination {
+    position: absolute;
+    bottom: -9.5% !important;
+    right: 35vw;
+    width: fit-content !important;
+    background-color: $text-color-white;
+    border-radius: 10px;
+    padding: .2rem ;
+    padding-bottom: 4%;
+    padding-top: .1rem;
+  }
+  
     
 //--------------768px------------------
 @media( min-width : 768px ) {
@@ -68,4 +76,22 @@ $text-color-white: #fff;
       font-size: 1.8rem;
     }
   }
+
+  .swiper-pagination {
+    padding: .3rem 1rem 1rem 1rem !important;
+    bottom: -1rem !important;
+    right: 46vw;
+  }
 }
+
+//--------------768px AND 1180px------------------
+@media( min-width : 768px ) and ( max-width : 1180px ) {
+
+  .swiper-pagination {
+    right: 42vw;
+    
+  }
+  
+}
+  
+

@@ -26,9 +26,16 @@ export default function HomePageSlider() {
           delay: 2500,
           disableOnInteraction: false,
         }}
-        // pagination={{
-        //   clickable: true,
-        // }}
+        pagination={{
+          clickable: true,
+        }}
+        style={{
+          "--swiper-pagination-color": "#66a57b",
+          "--swiper-pagination-bullet-inactive-color": "#999999",
+          "--swiper-pagination-bullet-inactive-opacity": "1",
+          "--swiper-pagination-bullet-size": "9px",
+          "--swiper-pagination-bullet-horizontal-gap": "6px",
+      }}
         // navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"

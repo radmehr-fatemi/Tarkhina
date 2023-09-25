@@ -52,16 +52,17 @@ $textShadow-color: #000000;
 
 
     a {
-        width: 180px;
         display: flex;
         align-items: center;
         justify-content: space-between;
         text-decoration: none;
         color: $text-color-white;
+        width: 160px;
         padding: .2rem 1rem .2rem .2rem;
         margin-top: .4rem;
         border: 1px solid $text-color-white;
         border-radius: 8px;
+        font-size: .9rem;
     }
 
     img {
@@ -127,6 +128,7 @@ $textShadow-color: #000000;
     .homPageChainMore {
         a {
             width: 200px;
+            font-size: 1.1rem;
         }
     }
 
