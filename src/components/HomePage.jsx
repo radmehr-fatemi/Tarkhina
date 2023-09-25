@@ -10,6 +10,7 @@ import searchSVG from "../assets/svg/searchHome.svg";
 import HomePageSlider from './HomePageSlider';
 import HomePageMenu from './HomePageMenu';
 import HomPageChain from './HomPageChain';
+import HomePageTerkhinehTour from './HomePageTerkhinehTour';
 
 const HomePage = () => {
     return (
@@ -25,6 +26,7 @@ const HomePage = () => {
 
             <HomePageMenu />
             <HomPageChain />
+            <HomePageTerkhinehTour />
         </div>
     );
 };
