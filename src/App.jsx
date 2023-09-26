@@ -8,6 +8,7 @@ import SignUp from './components/sign up/SignUp';
 import Login from './components/sign up/Login';
 import HomePage from './components/HomePage';
 import Navbar from './components/navbar/Navbar';
+import Footer from './components/Footer';
 
 
 const App = () => {
@@ -22,14 +23,27 @@ const App = () => {
 
   return (
     <>
-      {!!Object.keys(cookies).length && <Navbar />}
+      {
+        !!Object.keys(cookies).length ?
+      <div>
+      <Navbar />
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/signup' element={<SignUp />} />
         <Route path='/login' element={<Login />} />
       </Routes>
+      <Footer/>
+      </div> : 
+
+      <div>
+      <Routes>
+        <Route path='/signup' element={<SignUp />} />
+        <Route path='/login' element={<Login />} />
+      </Routes>
+      </div>
+      
+      }
     </>
   );
 };
-
 export default App;

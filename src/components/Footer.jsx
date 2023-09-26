@@ -2,14 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 //Style
-import styled from "./HomePageFooter.module.scss";
+import styled from "./Footer.module.scss";
 
 //SVG
 import twiterSVG from "../assets/svg/twiterHome.svg";
 import instagramSVG from "../assets/svg/instagramHome.svg";
 import telegramSVG from "../assets/svg/telegramHome.svg";
 
-const HomePageFooter = () => {
+const Footer = () => {
     return (
         <div className={styled.homePageFooterBackground}>
             <div className={styled.homePageFooter} >
@@ -72,4 +72,4 @@ const HomePageFooter = () => {
     );
 };
 
-export default HomePageFooter;
+export default Footer;

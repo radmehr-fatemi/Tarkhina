@@ -9,17 +9,18 @@ $border-color: #797979;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    // height: 19vh;
 }
 
 //--------------homePageFooter-----------------
 .homePageFooter {
-    height: 18vh;
+    // height: 18vh;
     padding: .5rem 1rem;
     backdrop-filter: brightness(.4);
     position: relative;
 
     h1 {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         color: $text-color-white;
         font-weight: $font-weight;
     }
@@ -41,8 +42,8 @@ $border-color: #797979;
     a {
         text-decoration: none;
         color: $text-color-white;
-        font-size: 1rem;
-        padding: .3rem;
+        font-size: .8rem;
+        padding: .2rem;
         display: inline-block;
         font-weight: 100;
     }
@@ -120,7 +121,7 @@ $border-color: #797979;
 }
 
 .footerField2Button {
-    width: 88%;
+    width: 85%;
     display: flex;
     justify-content: flex-end;
     margin-top: .6rem;
