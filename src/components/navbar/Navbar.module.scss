@@ -1,9 +1,12 @@
 $background-color-green: #d2f8de;
 $background-color-white: #fff;
 $boxShadow-color: #dcdcdc;
+$boxShadow-colorTwo: #adadad;
 $text-color: #00463c;
+$text-hover-color: #006b4f;
 $text-colorTwo: #000000;
 $border-color: #069f88;
+$border-colorTwo: #dcdcdc;
 
 //----------navbar---------------
 .navbar {
@@ -60,50 +63,151 @@ $border-color: #069f88;
     position: relative;
     background-color: $background-color-green;
     border-radius: 4px;
-    overflow: hidden;
     height: 100%;
     width: 40px;
     padding: .1rem;
+    cursor: pointer;
 
     img {
         display: block;
+    }
 
-        &:nth-child(1) {
-            width: 60%;
-            height: 100%;
-        }
+    .navbarIconsProfileImg1 {
+        width: 60%;
+        height: 100%;
+    }
 
-        &:nth-child(2) {
-            width: 40%;
-        }
+    .navbarIconsProfileImg2 {
+        width: 40%;
     }
 }
 
-.navbarMenuItemsProfile {
+//=======================Hover Icons======================
+
+//------navbarMenuItemsProfile-----------
+.navbarMenuItemsProfileParent {
     position: absolute;
-    top: 5rem;
-    left: 6.6rem;
+    top: .5rem;
+    left: -.4rem;
+    padding-top: 2rem;
+    cursor: pointer;
+}
+
+.navbarMenuItemsProfile {
     background-color: $background-color-white;
-    padding: .8rem;
+    padding: 0 .2rem;
     list-style-type: none;
-    box-shadow: 2px 0 4px $boxShadow-color;
-    border-radius: 4px;
+    box-shadow: 1px 0px 2px $boxShadow-colorTwo;
+    width: 125px;
+    opacity: 0;
+    display: none;
 
     li {
         display: flex;
         align-items: center;
-        border-bottom: solid 1px $boxShadow-color;
+        border-bottom: solid 1px $border-colorTwo;
         width: 100%;
     }
 
     a {
-        padding: .4rem 0;
+        padding: .6rem 0;
         text-decoration: none;
         color: $text-colorTwo;
         margin-right: 4px;
-        font-size: .9rem;
+        font-size: .8rem;
+        transition: all .3s;
+
+        &:hover {
+            color: $text-hover-color;
+            transition: all .3s;
+            font-size: .9rem;
+            padding-right: .5rem;
+            color: $text-hover-color;
+        }
     }
 }
+
+//----ShowProfile----
+.showProfile {
+    display: block;
+    animation: ShowProfile .4s forwards;
+}
+
+@keyframes ShowProfile {
+    0% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+//-------------navbarBranch-----------
+.navbarBranch {
+    position: relative;
+}
+
+.navbarMenuItemsBranchParents {
+    position: absolute;
+    top: 0;
+    right: -4rem;
+    padding-top: 1.5rem;
+    cursor: pointer;
+    display: none;
+    opacity: 0;
+}
+
+.navbarMenuItemsBranch {
+    background-color: $background-color-white;
+    box-shadow: 1px 0px 4px $boxShadow-colorTwo;
+    padding: 0 .2rem;
+
+    a {
+        border-bottom: 1px solid $border-colorTwo;
+        color: $text-colorTwo;
+        padding: .3rem .5rem;
+        width: 110px;
+
+        &:hover {
+            padding: .3rem .7rem !important;
+            box-shadow: none !important;
+            font-size: 1.1rem;
+            color: $text-hover-color;
+        }
+    }
+}
+
+.navbarMenuItemsBranchParents2 {
+    position: absolute;
+    top: 0;
+    right: 0rem;
+    padding-top: 1.5rem;
+    cursor: pointer;
+    display: none;
+    opacity: 0;
+}
+
+//-------showBranchMenu--------
+.showBranchMenu {
+    display: block;
+    animation: ShowBranchMenu .4s forwards;
+}
+
+@keyframes ShowBranchMenu {
+    0% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+//===========================================================
 
 //-----------hamburgerMenuField----------
 .hamburgerMenuField {

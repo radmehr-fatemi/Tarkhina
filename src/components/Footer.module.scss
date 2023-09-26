@@ -95,6 +95,7 @@ $border-color: #797979;
         background: none;
         border: 1px solid $border-color;
         border-radius: 4px;
+        color: $text-color-white;
 
         &::placeholder {
             color: $text-placeHolder;
@@ -113,6 +114,7 @@ $border-color: #797979;
         border: 1px solid $border-color;
         border-radius: 4px;
         padding: .5rem;
+        color: $text-color-white;
 
         &::placeholder {
             color: $text-placeHolder;
