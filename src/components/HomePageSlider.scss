@@ -47,7 +47,8 @@ $text-color-white: #fff;
   .swiper-pagination {
     position: absolute;
     bottom: -9.5% !important;
-    right: 35vw;
+    // right: 35vw;
+    margin: auto 36%;
     width: fit-content !important;
     background-color: $text-color-white;
     border-top-right-radius: 10px;
@@ -77,7 +78,8 @@ $text-color-white: #fff;
   .swiper-pagination {
     padding: .3rem 1rem 1rem 1rem !important;
     bottom: -1.1rem !important;
-    right: 46vw;
+    // right: 46vw;
+    margin: auto 44.6%;
   }
   
   .swiper-pagination-bullet {
@@ -90,8 +92,8 @@ $text-color-white: #fff;
 @media( min-width : 768px ) and ( max-width : 1180px ) {
 
   .swiper-pagination {
-    right: 42vw;
-    
+    // right: 42vw;
+    margin: auto 40%;
   }
   
 }

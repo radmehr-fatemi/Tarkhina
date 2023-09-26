@@ -1,6 +1,7 @@
 :root {
     --background-buttons: rgb(40, 180, 120);
     --background-button-hove: rgb(17, 213, 138);
+    --text-placeHolder-color:rgb(166, 186, 180);
 }
 
 //------------signUpForm----------------
@@ -13,6 +14,7 @@
 
     label {
         color: #044c48;
+        padding: .2rem;
     }
 
     input {
@@ -22,7 +24,7 @@
 
         &::placeholder {
             font-size: .8rem;
-            color: rgb(182, 185, 186);
+            color:var(--text-placeHolder-color);
         }
 
         &:focus {
@@ -82,7 +84,7 @@
     span {
         color: rgb(255, 6, 6);
         text-shadow: 2px 2px 4px rgb(255, 0, 0);
-        font-size: .7rem;
+        font-size: .5rem;
         animation: Show .3s;
     }
 
@@ -167,4 +169,12 @@
         border: 1px solid var(--background-buttons);
         border-radius: 8px;
     }
+
+    .checkboxSignUp ,.inputSignUp {
+
+        span {
+            font-size: .6rem;
+        }
+    }
+
 }
