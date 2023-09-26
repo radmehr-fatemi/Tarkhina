@@ -82,6 +82,13 @@ $border-colorTwo: #dcdcdc;
     }
 }
 
+.navbarIconsSearchImg {
+    display: none;
+}
+.navbarIconsProfileImg {
+    display: block;
+}
+
 //=======================Hover Icons======================
 
 //------navbarMenuItemsProfile-----------
@@ -275,7 +282,7 @@ $border-colorTwo: #dcdcdc;
     }
 }
 
-//--------------768px-----------------
+//--------------------------768px-------------------------------
 @media (min-width : 768px) {
 
     .navbar {
@@ -299,6 +306,13 @@ $border-colorTwo: #dcdcdc;
 
     .navbarMenuItems {
         display: block;
+    }
+
+    .navbarIconsSearchImg {
+        display: block;
+    }
+    .navbarIconsProfileImg {
+        display: none;
     }
 }
 

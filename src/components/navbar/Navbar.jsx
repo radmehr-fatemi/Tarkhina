@@ -109,10 +109,11 @@ const Navbar = () => {
 
             <div className={styled.navbarIcons} >
                 <div className={styled.navbarIconsSearch}>
-                    <Link> <img src={searchSVG} alt="search" /> </Link>
+                    <Link className={ styled.navbarIconsSearchImg } > <img src={searchSVG} alt="search" /> </Link>
+                    <Link className={ styled.navbarIconsProfileImg } > <img src={userSVG} alt="profile photo" /> </Link>
                     <Link> <img src={cartSVG} alt="shoping cart photo" /> </Link>
                 </div>
-
+                
                 <span className={styled.navbarIconsProfile} onMouseEnter={showPrifileHandler} onMouseLeave={unShowPrifileHandler} alt="profile">
                     <img className={styled.navbarIconsProfileImg1} src={userSVG} alt="profile" />
                     <img className={styled.navbarIconsProfileImg2} src={arrowDownSVG} alt="profile" />
