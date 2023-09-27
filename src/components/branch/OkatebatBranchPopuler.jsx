@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import './OkatebatBranchOffer.scss';
+import './OkatebatBranchPopuler.scss';
 
 //Data
 import { foodsData } from '../../data/foodsData';
@@ -10,15 +10,15 @@ import { foodsData } from '../../data/foodsData';
 //Components
 import CardSlider from '../shared/cardSlider';
 
-export default function OkatebatBranchOffer() {
+export default function OkatebatBranchPopuler() {
 
     const { offer, popular, non_Iranian } = foodsData;
 
     return (
-        <div className='OkatebatBranchOffer'>
+        <div className='OkatebatBranchPopuler'>
 
             <div>
-                <h1> پیشنهاد ویژه </h1>
+                <h1> غذا های محبوب </h1>
             </div>
 
             <div>
@@ -50,7 +50,7 @@ export default function OkatebatBranchOffer() {
                     className="mySwiper"
                 >
                     {
-                        offer.map(food =>
+                        popular.map(food =>
                             
                             <SwiperSlide key={food.id}>
                                 <CardSlider foodData={food} />

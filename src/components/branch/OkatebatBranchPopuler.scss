@@ -1,12 +1,16 @@
-.OkatebatBranchOffer {
-    padding: .4rem 1rem .4rem 0 ;
+$background-color-green: #417F56;
+
+.OkatebatBranchPopuler {
+    padding: 0 1rem 1rem 0 ;
     position: relative;
     height: fit-content ;
+    background-color: $background-color-green;
 
     h1 {
         &:nth-child(1) {
-            font-size: 1.5rem;
-            margin-bottom: .4rem;
+            font-size: 1.3rem;
+            padding: .5rem 0;
+            color: #fff;
         }
     }
     
@@ -31,7 +35,7 @@
 //-------------------768px-------------------
 @media ( min-width : 768px ) {
 
-    .OkatebatBranchOffer {
-        padding: .4rem 4rem 1rem 0;
+    .OkatebatBranchPopuler {
+        padding: 0rem 4rem 1rem 0;
     }
 }

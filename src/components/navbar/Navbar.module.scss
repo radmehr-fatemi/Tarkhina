@@ -64,7 +64,7 @@ $border-colorTwo: #dcdcdc;
     background-color: $background-color-green;
     border-radius: 4px;
     height: 100%;
-    width: 40px;
+    width: 30px;
     padding: .1rem;
     cursor: pointer;
 
@@ -296,10 +296,22 @@ $border-colorTwo: #dcdcdc;
         width: 14%;
     }
 
-    // .navbarIcons {}
+    .navbarIcons {
+            height: 25px;
+    }
 
+    .navbarIconsSearch {
+        img {
+
+            &:nth-child(1) {
+                width: 25px;
+            }
+        }
+    }
+    
     .navbarIconsProfile {
         display: flex;
+        padding: 0;
     }
 
     .hamburgerMenuField {

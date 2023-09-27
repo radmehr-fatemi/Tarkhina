@@ -1,6 +1,7 @@
 $background-color-white: #fff;
 $border-color : rgba(119, 119, 119, 0.8);
 $background-color-green: #417F56;
+$background-hover-green :#54976a;
 
 .cardSlider {
     display: flex;
@@ -8,9 +9,11 @@ $background-color-green: #417F56;
     justify-content: space-between;
     border-radius: 6px;
     overflow: hidden;
-    height: 27vh;
+    height: 26vh;
+    width: 160px;
     background-color: $background-color-white;
     border: 1px solid $border-color;
+    padding-bottom: .4rem;
 
     .cardSliderImg {
         width: 100%;
@@ -20,7 +23,7 @@ $background-color-green: #417F56;
             width: 100%;
             height: 80%;
         }
-        
+
         h1 {
             font-size: 1rem;
         }
@@ -44,7 +47,7 @@ $background-color-green: #417F56;
 
     img {
         &:nth-child(1) {
-            width: 18px;
+            width: 15px;
             cursor: pointer;
         }
     }
@@ -63,7 +66,7 @@ $background-color-green: #417F56;
             &:nth-child(2) {
                 padding: .15rem .3rem;
                 color: red;
-                background-color: rgb(255, 213, 213);
+                background-color: rgb(253, 228, 228);
                 border-radius: 40%;
                 font-size: .75rem;
             }
@@ -81,7 +84,7 @@ $background-color-green: #417F56;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        
+
         span {
             color: rgb(0, 0, 0);
             font-size: .9rem;
@@ -90,7 +93,7 @@ $background-color-green: #417F56;
 
     img {
         &:nth-child(1) {
-            width: 18px;
+            width: 15px;
         }
     }
 
@@ -102,7 +105,7 @@ $background-color-green: #417F56;
 
 .cardSliderButton {
     width: 100%;
-    padding: .4rem;
+    // padding: .4rem;
 
     button {
         width: 80%;
@@ -111,5 +114,27 @@ $background-color-green: #417F56;
         border-radius: 4px;
         background-color: $background-color-green;
         color: #fff;
+        cursor: pointer;
+        transition: all .3s;
+        
+        &:hover {
+            background-color: $background-hover-green;
+            transition: all .3s;
+        }
+    }
+}
+
+//----------------------768px--------------------
+@media (min-width : 768px) {
+    .cardSlider {
+        height: 34vh;
+        // width: 15vw;
+    }
+
+    .cardSliderButton {
+
+        button {
+            padding: .2rem;
+        }
     }
 }
