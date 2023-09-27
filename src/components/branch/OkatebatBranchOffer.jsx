@@ -8,7 +8,7 @@ import './OkatebatBranchOffer.scss';
 import { foodsData } from '../../data/foodsData';
 
 //Components
-import CardSlider from '../shared/cardSlider';
+import CardSlider from '../shared/CardSlider';
 
 export default function OkatebatBranchOffer() {
 
