@@ -10,46 +10,8 @@ $boxShadow-color: #22473f;
     min-width: 100vw;
 }
 
-//-----------------homePageSearch------------------
-.homePageSearch {
-    padding: .8rem;
-}
-
-//------------homePageInputSearch-----------------
-.homePageInputSearch {
-    width: 80%;
-    margin: auto;
-    border: 1px solid $border-color;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-
-    input {
-        width: 80%;
-        border: none;
-        padding: .4rem;
-
-        &:focus {
-            outline: none;
-        }
-
-        &::placeholder {
-            color: #98aca3;
-        }
-    }
-
-    img {
-        width: 18px;
-    }
-}
-
 //---------------768px-------------------
 @media (min-width : 768px) {
-
-    .homePageInputSearch {
-        display: none;
-    }
 
     .homePageMenu {
 

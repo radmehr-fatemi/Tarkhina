@@ -42,16 +42,16 @@ $text-color-white: #fff;
       display: flex;
       align-items: center;
     }
+    
   }
-
-  .swiper-pagination {
-    position: absolute;
-    bottom: -9.5% !important;
-    // right: 35vw;
-    margin: auto 36%;
-    width: fit-content !important;
-    background-color: $text-color-white;
-    border-top-right-radius: 10px;
+    .swiper-pagination {
+      position: absolute;
+      bottom: -9.5% !important;
+      // right: 35vw;
+      margin: auto 36%;
+      width: fit-content !important;
+      background-color: $text-color-white;
+      border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     padding: .2rem ;
     padding-bottom: 4%;

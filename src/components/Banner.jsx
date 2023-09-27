@@ -14,7 +14,7 @@ import backgroundSix from "../assets/image/backgroundSliderSix.jpg";
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import "./HomePageSlider.scss";
+import "./Banner.scss";
 
 export default function HomePageSlider() {
   return (

@@ -1,0 +1,115 @@
+$background-color-white: #fff;
+$border-color : rgba(119, 119, 119, 0.8);
+$background-color-green: #417F56;
+
+.cardSlider {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 6px;
+    overflow: hidden;
+    height: 27vh;
+    background-color: $background-color-white;
+    border: 1px solid $border-color;
+
+    .cardSliderImg {
+        width: 100%;
+        height: 60%;
+
+        img {
+            width: 100%;
+            height: 80%;
+        }
+        
+        h1 {
+            font-size: 1rem;
+        }
+    }
+}
+
+//---------cardSliderFields-----------
+.cardSliderFields {
+    padding: .1rem .5rem .1rem .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.cardSliderField1 {
+    padding-bottom: .2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+        &:nth-child(1) {
+            width: 18px;
+            cursor: pointer;
+        }
+    }
+
+    .cardSliderField1spans {
+        display: flex;
+
+        span {
+            &:nth-child(1) {
+                margin-left: 4px;
+                font-size: .7rem;
+                color: #b3b3b3;
+                text-decoration: line-through;
+            }
+
+            &:nth-child(2) {
+                padding: .15rem .3rem;
+                color: red;
+                background-color: rgb(255, 213, 213);
+                border-radius: 40%;
+                font-size: .75rem;
+            }
+        }
+    }
+}
+
+.cardSliderField2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // padding: .3rem 0;
+
+    .cardSliderField2spans {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        span {
+            color: rgb(0, 0, 0);
+            font-size: .9rem;
+        }
+    }
+
+    img {
+        &:nth-child(1) {
+            width: 18px;
+        }
+    }
+
+    span {
+        color: rgb(0, 0, 0);
+        font-size: .9rem;
+    }
+}
+
+.cardSliderButton {
+    width: 100%;
+    padding: .4rem;
+
+    button {
+        width: 80%;
+        padding: .4rem;
+        border: none;
+        border-radius: 4px;
+        background-color: $background-color-green;
+        color: #fff;
+    }
+}

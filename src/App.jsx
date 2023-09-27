@@ -8,9 +8,10 @@ import SignUp from './components/sign up/SignUp';
 import Login from './components/sign up/Login';
 import HomePage from './components/HomePage';
 import Navbar from './components/navbar/Navbar';
+import Banner from "./components/Banner";
 import Footer from './components/Footer';
 import OkatebatBranch from './components/branch/OkatebatBranch';
-
+import HomePageSearch from './components/HomePageSearch';
 
 const App = () => {
 
@@ -26,22 +27,24 @@ const App = () => {
     <>
       {
         !!Object.keys(cookies).length ?
-      <div>
-      <Navbar />
-      <Routes>
-        <Route path='/' element={<HomePage />} />
-        <Route path='/okatebatbranch' element={<OkatebatBranch />} />
-      </Routes>
-      <Footer/>
-      </div> : 
+          <div>
+            <Navbar />
+            <Banner />
+            <HomePageSearch />
+            <Routes>
+              <Route path='/' element={<HomePage />} />
+              <Route path='/okatebatbranch' element={<OkatebatBranch />} />
+            </Routes>
+            <Footer />
+          </div> :
 
-      <div>
-      <Routes>
-        <Route path='/signup' element={<SignUp />} />
-        <Route path='/login' element={<Login />} />
-      </Routes>
-      </div>
-      
+          <div>
+            <Routes>
+              <Route path='/signup' element={<SignUp />} />
+              <Route path='/login' element={<Login />} />
+            </Routes>
+          </div>
+
       }
     </>
   );
