@@ -115,8 +115,9 @@ $border-colorTwo: #dcdcdc;
         border-bottom: solid 1px $border-colorTwo;
         width: 100%;
     }
-
+    
     a {
+        width: 100%;
         padding: .6rem 0;
         text-decoration: none;
         color: $text-colorTwo;
@@ -159,7 +160,7 @@ $border-colorTwo: #dcdcdc;
 
 .navbarMenuItemsBranchParents {
     position: absolute;
-    top: 0;
+    top: .5rem;
     right: -4rem;
     padding-top: 1.5rem;
     cursor: pointer;
@@ -170,18 +171,19 @@ $border-colorTwo: #dcdcdc;
 .navbarMenuItemsBranch {
     background-color: $background-color-white;
     box-shadow: 1px 0px 4px $boxShadow-colorTwo;
-    padding: 0 .2rem;
+    padding: 0 .3rem;
 
     a {
         border-bottom: 1px solid $border-colorTwo;
         color: $text-colorTwo;
-        padding: .3rem .5rem;
+        padding: .65em .0rem;
         width: 110px;
+        font-size: .9rem !important;
 
         &:hover {
-            padding: .3rem .7rem !important;
+            padding: .5rem .5rem !important;
             box-shadow: none !important;
-            font-size: 1.1rem;
+            font-size: 1rem !important;
             color: $text-hover-color;
         }
     }
@@ -189,8 +191,8 @@ $border-colorTwo: #dcdcdc;
 
 .navbarMenuItemsBranchParents2 {
     position: absolute;
-    top: 0;
-    right: 0rem;
+    top: .5rem;
+    right: -1rem;
     padding-top: 1.5rem;
     cursor: pointer;
     display: none;
@@ -250,6 +252,7 @@ $border-colorTwo: #dcdcdc;
         color: $text-color;
         margin-left: 4px;
         transition: all .3s;
+        font-size: 1.1rem;
 
         &:hover {
             color: $border-color;
@@ -293,7 +296,7 @@ $border-colorTwo: #dcdcdc;
         width: 14%;
     }
 
-    .navbarIcons {}
+    // .navbarIcons {}
 
     .navbarIconsProfile {
         display: flex;

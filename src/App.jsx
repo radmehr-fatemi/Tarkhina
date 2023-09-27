@@ -9,6 +9,7 @@ import Login from './components/sign up/Login';
 import HomePage from './components/HomePage';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/Footer';
+import OkatebatBranch from './components/branch/OkatebatBranch';
 
 
 const App = () => {
@@ -29,8 +30,7 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path='/' element={<HomePage />} />
-        <Route path='/signup' element={<SignUp />} />
-        <Route path='/login' element={<Login />} />
+        <Route path='/okatebatbranch' element={<OkatebatBranch />} />
       </Routes>
       <Footer/>
       </div> : 

@@ -78,10 +78,10 @@ const Navbar = () => {
 
                         <div className={ styled.navbarMenuItemsBranchParents }>
                             <ol className={styled.navbarMenuItemsBranch}>
-                                <li><Link> اکباتان </Link></li>
-                                <li><Link> چالوس </Link></li>
-                                <li><Link> اقدسیه </Link></li>
-                                <li><Link> ونک </Link></li>
+                                <li><Link to="/okatebatbranch"> اکباتان </Link></li>
+                                <li><Link to="/okatebatbranch"> چالوس </Link></li>
+                                <li><Link to="/okatebatbranch"> اقدسیه </Link></li>
+                                <li><Link to="/okatebatbranch"> ونک </Link></li>
                             </ol>
                         </div>
                     </li>
