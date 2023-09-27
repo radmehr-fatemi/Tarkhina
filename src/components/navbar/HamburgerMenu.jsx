@@ -37,12 +37,12 @@ const HamburgerMenu = () => {
                 </div>
 
                 <ul>
-                    <li><Link to='/' > صفحه اصلی </Link></li>
-                    <li><Link to='/branch' > شعبه </Link></li>
-                    <li><Link to='/menu' > منو </Link></li>
-                    <li><Link to='/deputize' > اعطای نمایندگی </Link></li>
-                    <li><Link to='/aboutus' > درباره ما </Link></li>
-                    <li><Link to='/contactus' > تماس با ما </Link></li>
+                    <li><Link onClick={ burgerHandler } to='/' > صفحه اصلی </Link></li>
+                    <li><Link onClick={ burgerHandler } to='/okatebatbranch' > شعبه </Link></li>
+                    <li><Link onClick={ burgerHandler } to='/menu' > منو </Link></li>
+                    <li><Link onClick={ burgerHandler } to='/deputize' > اعطای نمایندگی </Link></li>
+                    <li><Link onClick={ burgerHandler } to='/aboutus' > درباره ما </Link></li>
+                    <li><Link onClick={ burgerHandler } to='/contactus' > تماس با ما </Link></li>
 
                     <li><Link onClick={ () => removeCookie("user") } to='/' > خروج از حساب کاربری </Link></li>
                 </ul>
