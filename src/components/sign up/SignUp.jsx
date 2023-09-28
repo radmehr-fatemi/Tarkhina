@@ -55,6 +55,7 @@ const SignUp = () => {
                 confirmPassword: true,
                 isAccepted: true
             })
+            console.log( errors )
 
         } else {
             setCookies( "user" ,{ name : data.name ,email : data.email ,password : data.password } ,{ path : "/" } )

@@ -41,7 +41,7 @@ export const validation = ( type ,data ) => {
         if( !data.isAccepted ) {
             errors.isAccepted = requiredField
         } else {
-            delete errors.password
+            delete errors.isAccepted
         }
     }
 
