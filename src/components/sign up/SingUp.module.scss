@@ -8,7 +8,8 @@
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    padding-top: 30%;
 }
 
 //------------signUpForm----------------
@@ -16,7 +17,7 @@
     padding: 1rem;
     display: flex;
     flex-direction: column;
-    width: 90%;
+    width: 100%;
     height: fit-content;
     // margin-top: 30%;
     animation: Show .3s;
@@ -169,7 +170,7 @@
 //------------------768px-----------------------
 @media (min-width : 768px) {
     .signUp {
-        // padding: 6% 0;
+        padding: 0;
     }
 
     .signUpForm {

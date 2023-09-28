@@ -43,7 +43,7 @@ export default function OkatebatBranchNonIranian() {
                   }}
             >
                     {
-                        offer.map(food =>
+                        non_Iranian.map(food =>
                             
                             <SwiperSlide key={food.id}>
                                 <CardSlider foodData={food} />
