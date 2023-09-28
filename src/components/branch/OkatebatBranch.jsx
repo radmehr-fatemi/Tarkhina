@@ -12,6 +12,7 @@ import OkatebatBranchOffer from './OkatebatBranchOffer';
 import OkatebatBranchPopuler from './OkatebatBranchPopuler';
 import OkatebatBranchNonIranian from './OkatebatBranchNonIranian';
 import OkatebatBranchBanner from './OkatebatBranchBanner';
+import OkatebatBranchComment from './OkatebatBranchComment';
 
 const OkatebatBranch = () => {
     return (
@@ -28,6 +29,7 @@ const OkatebatBranch = () => {
             </div>
             
             <OkatebatBranchBanner />
+            <OkatebatBranchComment />
         </div>
     );
 };
