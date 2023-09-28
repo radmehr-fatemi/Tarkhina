@@ -22,30 +22,35 @@ export default function OkatebatBranchOffer() {
                 <h1> پیشنهاد ویژه </h1>
             </div>
 
-            <div>
-                <Swiper
-                  slidesPerView={2}
-                  spaceBetween={30}
-                  freeMode={true}
-                  pagination={{
-                    // clickable: true,
+            <Swiper
+                slidesPerView={1}
+                // centeredSlides={true}
+                spaceBetween={15}
+                className="mySwiper"
+                breakpoints={{
+                    0: {
+                      width: 350,
+                      slidesPerView: 'auto',
+                    },
+                    768: {
+                      width: 1000,
+                      slidesPerView: 'auto',
+                    },
+                    1180: {
+                      width: 1350,
+                      slidesPerView: 'auto',
+                    },
                   }}
-                  modules={[FreeMode, Pagination]}
-                  className="mySwiper"
-                >
-                    {
-                        offer.map(food =>
-                            
-                            <SwiperSlide key={food.id}>
-                                <CardSlider foodData={food} />
-                            </SwiperSlide>
-                        )
-                    }
-                    <SwiperSlide style={{ backgroundColor: "red" ,width : "1000px" }}>
-                        End
-                    </SwiperSlide>
-                </Swiper>
-            </div>
+            >
+                {
+                    offer.map(food =>
+
+                        <SwiperSlide key={food.id}>
+                            <CardSlider foodData={food} />
+                        </SwiperSlide>
+                    )
+                }
+            </Swiper>
         </div>
     );
 }

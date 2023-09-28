@@ -24,34 +24,27 @@ export default function OkatebatBranchPopuler() {
             <div>
                 <Swiper
                     slidesPerView={1}
-                    spaceBetween={10}
-                    pagination={{
-                        clickable: true,
-                    }}
-                    breakpoints={{
-                        '@0.00': {
-                            slidesPerView: 1,
-                            spaceBetween: 10,
-                        },
-                        '@0.75': {
-                            slidesPerView: 2,
-                            spaceBetween: 20,
-                        },
-                        '@1.00': {
-                            slidesPerView: 3,
-                            spaceBetween: 40,
-                        },
-                        '@1.50': {
-                            slidesPerView: 4,
-                            spaceBetween: 50,
-                        },
-                    }}
-                    // modules={[Pagination]}
+                    // centeredSlides={true}
+                    spaceBetween={15}
                     className="mySwiper"
+                    breakpoints={{
+                        0: {
+                            width: 350,
+                            slidesPerView: 'auto',
+                        },
+                        768: {
+                            width: 1000,
+                            slidesPerView: 'auto',
+                        },
+                        1180: {
+                            width: 1350,
+                            slidesPerView: 'auto',
+                        },
+                    }}
                 >
                     {
                         popular.map(food =>
-                            
+
                             <SwiperSlide key={food.id}>
                                 <CardSlider foodData={food} />
                             </SwiperSlide>
