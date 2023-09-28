@@ -1,7 +1,12 @@
 .OkatebatBranchComment {
     padding: .5rem;
     padding-bottom: 0;
-    height: 260px;
+    height: 280px;
+
+    .swiper-pagination {
+        bottom: 0 !important;
+        right: 0 !important;
+    }
 
     .OkatebatBranchCommentHeader {
         text-align: center;
@@ -11,7 +16,7 @@
 
     .OkatebatBranchCommentSwiper {
         position: relative;
-        height: 80%;
+        height:80%;
     }
 
     .swiper {
@@ -25,6 +30,7 @@
         height: 100%;
         width: fit-content;
     }
+
 }
 
 .OkatebatBranchCommentFields {
@@ -56,7 +62,7 @@
 
     p {
         padding: .2rem;
-        font-size: .9rem;
+        font-size: .85rem;
     }
 
     span {
@@ -69,15 +75,11 @@
 @media (min-width : 768px) {
 
     .OkatebatBranchComment {
-        padding: .8rem 2rem;
 
-        .swiper-pagination {
-            position: absolute;
-            bottom: 0;
-            right: 0 !important;
-            // margin: auto 35.5%;
-            // width: auto;
-        }
+    }
+
+    .OkatebatBranchCommentSwiper {
+        padding: .5rem 8vw .5rem 0;
     }
 
     .OkatebatBranchCommentFields {
