@@ -17,7 +17,7 @@ $placeHolder-color : #353535;
         width: fit-content !important;
 
         img {
-            width: 16px;
+            width: 14px;
         }
 
         a {
@@ -26,10 +26,11 @@ $placeHolder-color : #353535;
             justify-content: center;
             background-color: $background-color;
             width: fit-content;
-            padding: .2rem .5rem;
+            padding: .2rem .4rem;
             border-radius: 12px;
             text-decoration: none;
             color: $text-color;
+            font-size: .9rem;
         }
     }
 }
