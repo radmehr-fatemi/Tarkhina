@@ -8,6 +8,7 @@ import styled from "./OkatebatBranch.module.scss";
 import notesSVG from "./svg/notes.svg";
 
 //Components
+import HomePageSearch from '../HomePageSearch';
 import OkatebatBranchOffer from './OkatebatBranchOffer';
 import OkatebatBranchPopuler from './OkatebatBranchPopuler';
 import OkatebatBranchNonIranian from './OkatebatBranchNonIranian';
@@ -17,6 +18,7 @@ import OkatebatBranchComment from './OkatebatBranchComment';
 const OkatebatBranch = () => {
     return (
         <div>
+            <HomePageSearch />
             <OkatebatBranchOffer />
             <OkatebatBranchPopuler />
             <OkatebatBranchNonIranian />

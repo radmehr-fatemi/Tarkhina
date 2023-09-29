@@ -39,7 +39,7 @@ const HamburgerMenu = () => {
                 <ul>
                     <li><Link onClick={ burgerHandler } to='/' > صفحه اصلی </Link></li>
                     <li><Link onClick={ burgerHandler } to='/okatebatbranch' > شعبه </Link></li>
-                    <li><Link onClick={ burgerHandler } to='/menu' > منو </Link></li>
+                    <li><Link onClick={ burgerHandler } to='/menu/main' > منو </Link></li>
                     <li><Link onClick={ burgerHandler } to='/deputize' > اعطای نمایندگی </Link></li>
                     <li><Link onClick={ burgerHandler } to='/aboutus' > درباره ما </Link></li>
                     <li><Link onClick={ burgerHandler } to='/contactus' > تماس با ما </Link></li>

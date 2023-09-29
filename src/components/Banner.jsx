@@ -35,8 +35,9 @@ export default function HomePageSlider() {
           "--swiper-pagination-bullet-inactive-opacity": "1",
           "--swiper-pagination-bullet-size": "8px",
           "--swiper-pagination-bullet-horizontal-gap": "6px",
-      }}
-        // navigation={true}
+          "--swiper-navigation-size": "25px",
+        }}
+        navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >

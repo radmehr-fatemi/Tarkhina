@@ -12,6 +12,7 @@ import HomePageSearch from './HomePageSearch';
 const HomePage = () => {
     return (
         <div className={style.homePage} >
+            <HomePageSearch />
             <HomePageMenu />
             <HomPageChain />
             <HomePageTerkhinehTour />

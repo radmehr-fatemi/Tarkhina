@@ -87,15 +87,15 @@ const Navbar = () => {
                     </li>
 
                     <li className={ styled.navbarBranch }  onMouseEnter={showMenuHandler} onMouseLeave={unShowMenuHandler} >
-                        <Link to='/' > منو </Link>
+                        <Link to='/menu/main' > منو </Link>
                         <img src={arrowDownSVG} alt="arrow-down-menu" />
 
                         <div className={ styled.navbarMenuItemsBranchParents2 }  >
                             <ol className={styled.navbarMenuItemsBranch}>
-                                <li><Link> غذای اصلی </Link></li>
-                                <li><Link> پیش غذا </Link></li>
-                                <li><Link> دسر </Link></li>
-                                <li><Link> نوشیدنی </Link></li>
+                                <li><Link to="/menu/main"> غذای اصلی </Link></li>
+                                <li><Link to="/menu/main"> پیش غذا </Link></li>
+                                <li><Link to="/menu/main"> دسر </Link></li>
+                                <li><Link to="/menu/main"> نوشیدنی </Link></li>
                             </ol>
                         </div>
                     </li>

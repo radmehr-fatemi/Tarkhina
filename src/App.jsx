@@ -11,7 +11,8 @@ import Navbar from './components/navbar/Navbar';
 import Banner from "./components/Banner";
 import Footer from './components/Footer';
 import OkatebatBranch from './components/branch/OkatebatBranch';
-import HomePageSearch from './components/HomePageSearch';
+import Menu from './components/menu/Menu';
+import MenuMain from './components/menu/MenuMain';
 
 const App = () => {
 
@@ -30,10 +31,14 @@ const App = () => {
           <div>
             <Navbar />
             <Banner />
-            <HomePageSearch />
             <Routes>
               <Route path='/' element={<HomePage />} />
               <Route path='/okatebatbranch' element={<OkatebatBranch />} />
+
+              <Route path='/menu/*' element={<Menu />} >
+                <Route path='main' element={<MenuMain />} />
+              </Route>
+
             </Routes>
             <Footer />
           </div> :

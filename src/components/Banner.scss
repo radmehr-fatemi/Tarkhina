@@ -56,6 +56,11 @@ $text-color-white: #fff;
       padding-bottom: 4%;
       padding-top: 0;
     }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: $text-color-white;
+    }
   }
     
     

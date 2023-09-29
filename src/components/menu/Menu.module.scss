@@ -1,0 +1,45 @@
+$background-color: #EDEDED;
+$text-color: #717171;
+$text-hove-color: #008559;
+
+.meno {
+}
+
+.menuLinks {
+    padding: 0 1rem;
+    background-color: $background-color;
+
+    ul {
+        display: flex;
+        align-items: baseline;
+        list-style-type: none;
+
+        a {
+            text-decoration: none;
+            color: $text-color;
+            padding: .7rem 0;
+            margin: 0 .6rem;
+            display: block;
+            font-size: 1.1rem;
+            border: 2px solid $background-color;
+            font-weight: 500;
+            transition: all .3s;
+
+            &:hover {
+                color: $text-hove-color;
+                font-weight: 700;
+                border-bottom: 2px solid $text-hove-color;
+                transition: all .3s;
+            }
+        }
+
+    }
+}
+
+//---------------768px----------------
+@media (min-width : 768px) {
+
+    .menuLinks {
+        padding: 0 8vw;
+    }
+}

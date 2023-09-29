@@ -1,0 +1,76 @@
+$background-color: #EDEDED;
+$text-color: #353535;
+$border-color : #CBCBCB;
+$placeHolder-color : #353535;
+
+.MenuMain {
+    position: relative;
+    // display: block;
+
+    .MenuMainSwiper {}
+
+    .swiper {
+        padding: .5rem 1rem .5rem 0;
+    }
+
+    .swiper-slide {
+        width: fit-content !important;
+
+        img {
+            width: 16px;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $background-color;
+            width: fit-content;
+            padding: .2rem .5rem;
+            border-radius: 12px;
+            text-decoration: none;
+            color: $text-color;
+        }
+    }
+}
+
+.MenuMainSearch {
+    width: 40%;
+    margin: auto;
+    border: 1px solid $border-color;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    display: none;
+    padding: .5rem;
+
+    input {
+        // width: 90%;
+        border: none;
+        
+        &:focus {
+            outline: none;
+        }
+        
+        &::placeholder {
+            color: $placeHolder-color;
+        }
+    }
+    
+    img {
+        width: 17px;
+    }
+}
+
+//------------------768px------------------
+@media (min-width : 768px) {
+    .MenuMain {
+        display: flex;
+        padding: .5rem 10vw;
+    }
+
+    .MenuMainSearch {
+        display: flex;
+    }
+}
