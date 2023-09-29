@@ -6,7 +6,7 @@ $boxShadow-color: #22473f;
 
 //--------------homePageMenu----------------
 .homePageMenu {
-    padding-top: 1rem;
+    // padding-top: 1rem;
 
     h1 {
         color: $text-color;
@@ -58,8 +58,9 @@ $boxShadow-color: #22473f;
 
 //---------------768px-------------------
 @media (min-width : 768px) {
-
+    
     .homePageMenu {
+        padding-top: 1rem;
 
         li {
             width: 200px;

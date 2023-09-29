@@ -8,70 +8,130 @@ import './MenuMain.scss';
 //SVG
 import arrowLeftSVG from "./svg/arrow-left-home.svg";
 import searchSVG from "./svg/search.svg";
+import cartSVG from "../../assets/svg/cart.svg";
 
 //Components
 import HomePageSearch from '../HomePageSearch';
+import CardMenu from '../shared/CardMenu';
+
+//data
+import { foodsData } from '../../data/foodsData';
 
 const MenuMain = () => {
+
+    const { iranian, non_Iranian, pizzas, sandwiches } = foodsData
+
     return (
         <div className='MenuMain'>
-            <div className='MenuMainSwiper'>
-                <Swiper
-                    pagination={true}
-                    className="mySwiper"
-                    slidesPerView={3}
-                    // centeredSlides={true}
-                    spaceBetween={8}
-                    breakpoints={{
-                        0: {
-                            width: 350,
-                            slidesPerView: 3,
-                        },
-                        768: {
-                            width: 1000,
-                            slidesPerView: 6,
-                        },
-                        // 1180: {
-                        //     width: 1350,
-                        //     slidesPerView: 5,
-                        // },
-                    }}
-                >
 
-                    <SwiperSlide>
-                    <Link> غذا های ایرانی <img src={arrowLeftSVG} alt="arrow left photo" /> </Link>
-                    </SwiperSlide>
+            <div className='MenuMainItems'>
+                <div className='MenuMainSwiper'>
+                    <Swiper
+                        pagination={true}
+                        className="mySwiper"
+                        slidesPerView={3}
+                        // centeredSlides={true}
+                        spaceBetween={8}
+                        breakpoints={{
+                            0: {
+                                width: 350,
+                                slidesPerView: 3,
+                            },
+                            768: {
+                                width: 1000,
+                                slidesPerView: 6,
+                            },
+                            // 1180: {
+                            //     width: 1350,
+                            //     slidesPerView: 5,
+                            // },
+                        }}
+                    >
 
-                    <SwiperSlide>
-                    <Link> غذا های غیر ایرانی <img src={arrowLeftSVG} alt="arrow left photo" /> </Link>
-                    </SwiperSlide>
+                        <SwiperSlide>
+                            <Link> غذا های ایرانی <img src={arrowLeftSVG} alt="arrow left photo" /> </Link>
+                        </SwiperSlide>
 
-                    <SwiperSlide>
-                    <Link> پیتزا ها <img src={arrowLeftSVG} alt="arrow left photo" /> </Link>
-                    </SwiperSlide>
+                        <SwiperSlide>
+                            <Link> غذا های غیر ایرانی <img src={arrowLeftSVG} alt="arrow left photo" /> </Link>
+                        </SwiperSlide>
 
-                    <SwiperSlide>
-                    <Link> ساندویچ ها <img src={arrowLeftSVG} alt="arrow left photo" /> </Link>
-                    </SwiperSlide>
+                        <SwiperSlide>
+                            <Link> پیتزا ها <img src={arrowLeftSVG} alt="arrow left photo" /> </Link>
+                        </SwiperSlide>
 
-                    <SwiperSlide>
-                    <Link> پرفروش ترین  <img src={arrowLeftSVG} alt="arrow left photo" /> </Link>
-                    </SwiperSlide>
+                        <SwiperSlide>
+                            <Link> ساندویچ ها <img src={arrowLeftSVG} alt="arrow left photo" /> </Link>
+                        </SwiperSlide>
 
-                    <SwiperSlide>
-                    <Link> اقتصادی ترین <img src={arrowLeftSVG} alt="arrow left photo" /> </Link>
-                    </SwiperSlide>
+                        <SwiperSlide>
+                            <Link> پرفروش ترین  <img src={arrowLeftSVG} alt="arrow left photo" /> </Link>
+                        </SwiperSlide>
 
-                </Swiper>
-            </div>
+                        <SwiperSlide>
+                            <Link> اقتصادی ترین <img src={arrowLeftSVG} alt="arrow left photo" /> </Link>
+                        </SwiperSlide>
 
-            <HomePageSearch />
+                    </Swiper>
+                </div>
 
-            <div className={"MenuMainSearch"} >
+                <div className={"MenuMainSearch"} >
                     <input type="text" placeholder=' جست و جو ' />
                     <img src={searchSVG} alt="" />
                 </div>
-            
+            </div>
+            <HomePageSearch />
+
+            <div className='MenuMainFields'>
+
+                <div>
+                    <div className='MenuMainField1'>
+                        <h3> غذا های ایرانی </h3>
+                        <Link to="/cart" >
+                            <img src={cartSVG} alt="cart photo" style={{ width: "20px" }} />
+                            تکمیل خرید
+                        </Link>
+                    </div>
+
+                    <div>
+                        {
+                            iranian.map(food => <CardMenu key={ food.id } foodData={ food } /> )
+                        }
+                    </div>
+                </div>
+
+                <div className='MenuMainField2'>
+                    <h3> غذاهای غیر ایرانی </h3>
+
+                    <div>
+                        {
+                            non_Iranian.map(food => <CardMenu key={ food.id } foodData={ food } /> )
+                        }
+                    </div>
+                </div>
+
+                <div className='MenuMainField3'>
+                    <h3> پیتزا </h3>
+
+                    <div>
+                        {
+                            pizzas.map(food => <CardMenu key={ food.id } foodData={ food } /> )
+                        }
+                    </div>
+                </div>
+
+                <div className='MenuMainField4'>
+                    <h3> سانویچ </h3>
+
+                    <div>
+                        {
+                            sandwiches.map(food => <CardMenu key={ food.id } foodData={ food } /> )
+                        }
+                    </div>
+                </div>
+
+
+            </div>
         </div>
     );
 };

@@ -1,13 +1,16 @@
 $background-color: #EDEDED;
 $text-color: #353535;
+$text-color-green: #417F56;
+$text-hover-green: #00b25f;
 $border-color : #CBCBCB;
 $placeHolder-color : #353535;
 
 .MenuMain {
     position: relative;
-    // display: block;
 
-    .MenuMainSwiper {}
+    // .MenuMainItems {}
+
+    // .MenuMainSwiper {}
 
     .swiper {
         padding: .5rem 1rem .5rem 0;
@@ -43,35 +46,90 @@ $placeHolder-color : #353535;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    display: none;
     padding: .5rem;
+    display: none;
 
     input {
         // width: 90%;
         border: none;
-        
+
         &:focus {
             outline: none;
         }
-        
+
         &::placeholder {
             color: $placeHolder-color;
         }
     }
-    
+
     img {
         width: 17px;
     }
 }
 
+.MenuMainFields {
+    padding: .4rem 5vw;
+}
+
+.MenuMainField2,
+.MenuMainField3,
+.MenuMainField4 {
+
+    h3 {
+        padding: .8rem 0 .4rem 0;
+    }
+}
+
+.MenuMainField1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    // h3 {    }
+
+    a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: $text-color-green;
+        font-size: 1.1rem;
+        padding: .3rem .5rem;
+        border: 1px solid $text-color-green;
+        border-radius: 4px;
+        transition: all .3s;
+
+        &:hover {
+            border: 1px solid $text-hover-green;
+            color: $text-hover-green;
+            transition: all .3s;
+        }
+    }
+
+    img {
+        margin-left: 4px;
+    }
+}
+
+
+
 //------------------768px------------------
 @media (min-width : 768px) {
     .MenuMain {
-        display: flex;
         padding: .5rem 10vw;
+    }
+
+    .MenuMainItems {
+        display: flex;
     }
 
     .MenuMainSearch {
         display: flex;
+    }
+
+    .MenuMainField1 {
+
+        h3 {
+            font-size: 1.3rem;
+        }
     }
 }
