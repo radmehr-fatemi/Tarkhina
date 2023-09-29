@@ -45,16 +45,16 @@ $text-color-white: #fff;
     
     .swiper-pagination {
       position: absolute;
-      bottom: -9.5% ;
+      bottom: -6% ;
       right: 35vw;
       // margin: auto 35.5%;
       width: fit-content !important;
       background-color: $text-color-white;
       border-top-right-radius: 10px;
       border-top-left-radius: 10px;
-      padding: .2rem ;
+      // padding: .2rem ;
       padding-bottom: 4%;
-      padding-top: 0;
+      padding-top: .1rem;
     }
 
     .swiper-button-next,
