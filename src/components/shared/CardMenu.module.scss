@@ -4,7 +4,7 @@ $background-hover :#009e5f;
 
 .cardMenu {
     width: 100%;
-    height: fit-content;
+    height: 100px;
     margin: .4rem 0;
     display: flex;
     border-radius: 4px;
@@ -15,24 +15,25 @@ $background-hover :#009e5f;
 .cardMenuImg {
 
     img {
-        width: 110px;
+        width: 120px;
         height: 100%;
     }
 }
 
 .cardMenuFields {
     width: 100%;
+    height: 100%;
     padding: .5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .cardMenuField1,
 .cardMenuField2,
 .cardMenuField3 {
-    padding: .2rem;
+    // padding: .1rem;
 }
 
 .cardMenuField1 {
