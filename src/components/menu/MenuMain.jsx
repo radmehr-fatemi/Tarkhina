@@ -38,13 +38,13 @@ const MenuMain = () => {
                                 slidesPerView: 3,
                             },
                             768: {
-                                width: 1000,
+                                width: 800,
+                                slidesPerView: 5,
+                            },
+                            1180: {
+                                width: 1350,
                                 slidesPerView: 6,
                             },
-                            // 1180: {
-                            //     width: 1350,
-                            //     slidesPerView: 5,
-                            // },
                         }}
                     >
 
@@ -121,7 +121,7 @@ const MenuMain = () => {
                 </div>
 
                 <div className='MenuMainField4'>
-                    <h3> سانویچ </h3>
+                    <h3> ساندویچ </h3>
 
                     <div className="MenuMainFieldCArds">
                         {

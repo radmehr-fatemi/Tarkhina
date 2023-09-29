@@ -2,8 +2,7 @@ $background-color: #EDEDED;
 $text-color: #717171;
 $text-hove-color: #008559;
 
-.meno {
-}
+.meno {}
 
 .menuLinks {
     padding: 0 1rem;
@@ -32,6 +31,15 @@ $text-hove-color: #008559;
                 transition: all .3s;
             }
         }
+
+        li:first-child {
+            a {
+                color: $text-hove-color;
+                font-weight: 700;
+                border-bottom: 2px solid $text-hove-color;
+            }
+        }
+
 
     }
 }
