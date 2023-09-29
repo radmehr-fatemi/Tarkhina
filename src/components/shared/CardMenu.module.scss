@@ -105,18 +105,23 @@ $background-hover :#009e5f;
         width: 40%;
     }
 
-    button {
-        border: none;
-        padding: .4rem;
-        background-color: $background-color;
-        color: #fff;
-        border-radius: 4px;
-        cursor: pointer;
-        transition: all .3s;
+    .cardMenuField3Button {
+        width: 46%;
 
-        &:hover {
-            background-color: $background-hover;
+        button {
+            width: 100%;
+            border: none;
+            padding: .22rem;
+            background-color: $background-color;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
             transition: all .3s;
+
+            &:hover {
+                background-color: $background-hover;
+                transition: all .3s;
+            }
         }
     }
 }
@@ -153,31 +158,31 @@ $background-hover :#009e5f;
     }
 
     .cardMenuField2 {
-    
+
         p {
             font-size: 1.1rem;
         }
-    
+
         span {
             font-size: 1rem;
         }
     }
-    
+
     .cardMenuField3 {
 
-        button {
-            padding: .4rem 1.8rem;
+        .cardMenuField3Button {
+            width: 60%;
         }
     }
 }
 
 //-------------------768px AND 1180px-----------------
-@media (min-width : 768px) and ( max-width : 1180px ) {
+@media (min-width : 768px) and (max-width : 1180px) {
 
     .cardMenuField3 {
 
-        button {
-            padding: .4rem 1rem;
-        }
-    }    
+        // button {
+        //     padding: .4rem 1rem;
+        // }
+    }
 }
