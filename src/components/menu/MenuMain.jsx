@@ -93,7 +93,7 @@ const MenuMain = () => {
                         </Link>
                     </div>
 
-                    <div>
+                    <div className="MenuMainFieldCArds">
                         {
                             iranian.map(food => <CardMenu key={ food.id } foodData={ food } /> )
                         }
@@ -103,7 +103,7 @@ const MenuMain = () => {
                 <div className='MenuMainField2'>
                     <h3> غذاهای غیر ایرانی </h3>
 
-                    <div>
+                    <div className="MenuMainFieldCArds">
                         {
                             non_Iranian.map(food => <CardMenu key={ food.id } foodData={ food } /> )
                         }
@@ -113,7 +113,7 @@ const MenuMain = () => {
                 <div className='MenuMainField3'>
                     <h3> پیتزا </h3>
 
-                    <div>
+                    <div className="MenuMainFieldCArds">
                         {
                             pizzas.map(food => <CardMenu key={ food.id } foodData={ food } /> )
                         }
@@ -123,7 +123,7 @@ const MenuMain = () => {
                 <div className='MenuMainField4'>
                     <h3> سانویچ </h3>
 
-                    <div>
+                    <div className="MenuMainFieldCArds">
                         {
                             sandwiches.map(food => <CardMenu key={ food.id } foodData={ food } /> )
                         }

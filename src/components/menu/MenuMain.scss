@@ -7,7 +7,6 @@ $placeHolder-color : #353535;
 
 .MenuMain {
     position: relative;
-
     // .MenuMainItems {}
 
     // .MenuMainSwiper {}
@@ -110,6 +109,10 @@ $placeHolder-color : #353535;
     }
 }
 
+.MenuMainFieldCArds {
+    display: flex;
+    flex-wrap: wrap;
+}
 
 
 //------------------768px------------------
@@ -126,8 +129,12 @@ $placeHolder-color : #353535;
         display: flex;
     }
 
+    .MenuMainFields {
+        padding: .4rem 1.2vw .4rem 5vw;
+    }
+    
     .MenuMainField1 {
-
+        
         h3 {
             font-size: 1.3rem;
         }
