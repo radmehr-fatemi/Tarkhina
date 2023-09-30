@@ -3,6 +3,9 @@ import "./App.scss";
 import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
 import { useCookies } from 'react-cookie';
 
+//Context
+import CartContextProvider from './components/shared/svg/CartContextProvider';
+
 //Components
 import SignUp from './components/sign up/SignUp';
 import Login from './components/sign up/Login';
@@ -25,7 +28,7 @@ const App = () => {
   }, [cookies])
 
   return (
-    <>
+    <CartContextProvider>
       {
         !!Object.keys(cookies).length ?
           <div>
@@ -51,7 +54,7 @@ const App = () => {
           </div>
 
       }
-    </>
+    </CartContextProvider>
   );
 };
 export default App;

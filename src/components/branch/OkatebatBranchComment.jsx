@@ -16,7 +16,6 @@ import userImg1 from "../../data/images/user1.jpg";
 
 export default function OkatebatBranchComment() {
 
-    console.log(userComentsData[0].image)
     return (
         <div className='OkatebatBranchComment'>
 
