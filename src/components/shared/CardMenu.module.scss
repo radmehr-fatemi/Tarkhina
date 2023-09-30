@@ -104,7 +104,7 @@ $background-hover-green :#54976a;
 
 .cardMenuField3Button {
     width: 50%;
-    height: 22px;
+    height: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -147,7 +147,7 @@ $background-hover-green :#54976a;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        transition: all .3S;
+        transition: all .25S;
 
         span {
             border-bottom: 2px solid $background-color-green;
