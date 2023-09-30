@@ -1,4 +1,4 @@
-import React ,{ useContext } from 'react';
+import React, { useContext } from 'react';
 
 //Style
 import styled from "./CardSlider.module.scss";
@@ -6,14 +6,18 @@ import styled from "./CardSlider.module.scss";
 //SVG
 import heartSVG from "../../assets/svg/heart.svg";
 import starSVG from "../../assets/svg/star.svg";
+import trashSVG from "./svg/trash.svg";
 
 //Context
 import { CartContext } from './svg/CartContextProvider';
 
+//function
+import { findQuantity } from './function';
+
 const CardSlider = ({ foodData }) => {
 
-    const { name, image, price, stars, discount } = foodData;
-    const { state ,dispatch } = useContext( CartContext );
+    const { name, image, price, stars, discount, id } = foodData;
+    const { state, dispatch } = useContext(CartContext);
 
     return (
         <div className={styled.cardSlider}>
@@ -24,7 +28,7 @@ const CardSlider = ({ foodData }) => {
 
             <div className={styled.cardSliderFields}>
                 <div className={styled.cardSliderField1}>
-                    <img src={heartSVG} alt="like photo" onClick={ () => dispatch({ type: "LIKED_ITEM" ,payload: foodData }) } />
+                    <img src={heartSVG} alt="like photo" onClick={() => dispatch({ type: "LIKED_ITEM", payload: foodData })} />
                     <div className={styled.cardSliderField1spans}>
                         <span> {parseInt("220000").toLocaleString()} </span>
                         <span> {discount} % </span>
@@ -41,11 +45,29 @@ const CardSlider = ({ foodData }) => {
             </div>
 
             <div className={styled.cardSliderButton}>
-                <button onClick={ () => dispatch({ type: "ADD_ITEM" ,payload: foodData }) } > افزودن به سبد خرید </button>
-                <button onClick={ () => dispatch({ type: "INCREASE" ,payload: foodData }) } > +</button>
-                <button onClick={ () => dispatch({ type: "CHECKOUT" ,payload: foodData }) } > CHECKOUT</button>
+
+                {findQuantity(id, state.selectedItems) === 0 ?
+                    <button onClick={() => dispatch({ type: "ADD_ITEM", payload: foodData })} > افزودن به سبد خرید </button> :
+
+                    <div className={styled.cardSliderButtonShow} >
+                        {findQuantity(id, state.selectedItems) >= 1 &&
+                            <button onClick={() => dispatch({ type: "INCREASE", payload: foodData })} > + </button>
+                        }
+
+                        <span> {findQuantity(id, state.selectedItems)} </span>
+
+                        {findQuantity(id, state.selectedItems) === 1 &&
+                            <button onClick={() => dispatch({ type: "REMOVE_ITEM", payload: foodData })} > <img src={ trashSVG } alt="trash photo" /> </button>
+                        }
+
+                        {findQuantity(id, state.selectedItems) > 1 &&
+                            <button onClick={() => dispatch({ type: "DECREASE", payload: foodData })} > - </button>
+                        }
+                    </div>
+
+                }
             </div>
-        </div>
+        </div >
     );
 };
 
