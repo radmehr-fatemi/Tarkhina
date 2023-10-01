@@ -39,7 +39,7 @@ const CartMobileDesign = () => {
                 <div className="CartMobileDesignField1">
                     <Swiper
                         direction={'vertical'}
-                        slidesPerView={5}
+                        slidesPerView={4}
                         spaceBetween={0}
                         mousewheel={true}
                         pagination={{
