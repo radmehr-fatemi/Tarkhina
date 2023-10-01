@@ -6,6 +6,7 @@ import styled from "./CardMenu.module.scss";
 
 //SVG
 import starSVG from "./svg/star.svg";
+import starEmptySVG from "./svg/star-empty.svg";
 import trashSVG from "./svg/trash.svg";
 import heartSVG from "../../assets/svg/heart.svg";
 import hearRedSVG from "./svg/heart-red.svg";
@@ -14,7 +15,7 @@ import hearRedSVG from "./svg/heart-red.svg";
 import { CartContext } from '../context/CartContextProvider';
 
 //function
-import { shortHandler, findQuantity, discountCounter, checkIsLiked } from './function';
+import { shortHandler, findQuantity, discountCounter, checkIsLiked, setStars } from './function';
 
 const CardMenu = ({ foodData }) => {
 
@@ -59,12 +60,9 @@ const CardMenu = ({ foodData }) => {
                     </div>
 
                     <div className={styled.cardMenuField3Spans}>
-                        <img src={starSVG} alt="star photo" />
-                        <img src={starSVG} alt="star photo" />
-                        <img src={starSVG} alt="star photo" />
-                        <img src={starSVG} alt="star photo" />
-                        <img src={starSVG} alt="star photo" />
+                        {setStars(stars, starSVG, starEmptySVG)}
                     </div>
+
                     <div className={styled.cardMenuField3Button}>
                         {findQuantity(id, state.selectedItems) === 0 ?
                             <button onClick={() => dispatch({ type: "ADD_ITEM", payload: foodData })} > افزودن به سبد خرید </button> :
