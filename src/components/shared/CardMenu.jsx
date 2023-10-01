@@ -53,8 +53,8 @@ const CardMenu = ({ foodData }) => {
                     <div className={styled.cardMenuField3Hearts}>
                         {
                             checkIsLiked(id, state) ?
-                                <img className={styled.cardSliderField1Heart1} src={hearRedSVG} alt="like photo" onClick={() => dispatch({ type: "LIKED_ITEM", payload: foodData })} /> :
-                                <img className={styled.cardSliderField1Heart2} src={heartSVG} alt="like photo" onClick={() => dispatch({ type: "LIKED_ITEM", payload: foodData })} />
+                              <button>  <img className={styled.cardSliderField1Heart1} src={hearRedSVG} alt="like photo" onClick={() => dispatch({ type: "LIKED_ITEM", payload: foodData })} /> </button> :
+                              <button>  <img className={styled.cardSliderField1Heart2} src={heartSVG} alt="like photo" onClick={() => dispatch({ type: "LIKED_ITEM", payload: foodData })} /> </button>
                         }
                     </div>
 
