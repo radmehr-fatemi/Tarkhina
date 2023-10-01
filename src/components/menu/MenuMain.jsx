@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import './MenuMain.scss';
+import { v4 } from 'uuid';
 
 //SVG
 import arrowLeftSVG from "./svg/arrow-left-home.svg";
@@ -95,7 +96,7 @@ return (
 
                 <div className="MenuMainFieldCArds">
                     {
-                        iranian.map(food => <CardMenu key={food.id} foodData={food} />)
+                        iranian.map(food => <CardMenu key={ food.id } foodData={food} />)
                     }
                 </div>
             </div>
@@ -105,7 +106,7 @@ return (
 
                 <div className="MenuMainFieldCArds">
                     {
-                        non_Iranian.map(food => <CardMenu key={food.id} foodData={food} />)
+                        non_Iranian.map(food => <CardMenu key={ food.id } foodData={food} />)
                     }
                 </div>
             </div>
@@ -115,7 +116,7 @@ return (
 
                 <div className="MenuMainFieldCArds">
                     {
-                        pizzas.map(food => <CardMenu key={food.id} foodData={food} />)
+                        pizzas.map(food => <CardMenu key={ food.id } foodData={food} />)
                     }
                 </div>
             </div>
@@ -125,7 +126,7 @@ return (
 
                 <div className="MenuMainFieldCArds">
                     {
-                        sandwiches.map(food => <CardMenu key={food.id} foodData={food} />)
+                        sandwiches.map(food => <CardMenu key={ food.id } foodData={food} />)
                     }
                 </div>
             </div>

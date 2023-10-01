@@ -8,7 +8,7 @@ export const validation = ( type ,data ) => {
         if(!data.email) {
             errors.email = requiredField
         } else if( !emailRegex.test(data.email) ) {
-            errors.email = requiredField
+            errors.email = "ایمیل معتبر نیست"
         }else {
             delete errors.email
         }

@@ -1,0 +1,160 @@
+$border-color: #717171;
+$background-color1: #ebebeb;
+$background-color2: #d9ffdecc;
+$background-color-green: #417F56;
+$text-color-green: #09bc00;
+$text-color-H3 :#353535;
+$text-color-Span :#717171;
+$text-color-P :#A9791C;
+
+.CartMobileDesign {
+    padding: 0 2rem;
+    height: 80vh;
+}
+
+.CartMobileDesignHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+}
+
+.CartMobileDesignFields {
+    height: 100%;
+    border: 1px solid $border-color;
+    border-radius: 10px;
+}
+
+.CartMobileDesignField1 {
+    height: 60%;
+    width: 100%;
+    position: relative;
+    padding-top: .4rem;
+
+    .swiper {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
+
+    .swiper-slide {
+        width: 80%;
+        margin:  auto;
+        padding: .4rem;
+        background-color: $background-color1;
+        border-radius: 10px;
+    }
+}
+
+.CartMobileDesignField1Product {
+    // background-color: antiquewhite;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+
+.CartMobileDesignField1ProductName {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.CartMobileDesignField1ProductButtons {
+    background-color: antiquewhite;
+    // height: 100%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $background-color2;
+    padding: .2rem;
+
+    button {
+        height: 100%;
+        width: 20px;
+        border: none;
+        color: $text-color-green;
+        background: none;
+        font-size: 1.6rem;
+    }
+
+    span {
+        color: #078a00;
+    }
+}
+
+.CartMobileDesignField2,
+.CartMobileDesignField3,
+.CartMobileDesignField4 {
+
+    h3 {
+        color: $text-color-H3;
+    }
+
+    span {
+        color: $text-color-Span;
+    }
+}
+
+.CartMobileDesignField2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    margin-top: .6rem;
+    padding: 1.4rem 0;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+}
+
+.CartMobileDesignField3 {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+
+    .CartMobileDesignField3Price {
+        display: flex;
+        justify-content: space-between;
+        padding: .8rem 0;
+    }
+
+    p {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        color: $text-color-P;
+    }
+
+    img {
+        width: 20px;
+        margin-left: 4px;
+    }
+}
+
+.CartMobileDesignField4 {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+
+    .CartMobileDesignField4price {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 0;
+        border-top: 1px solid $border-color;
+    }
+
+    button {
+        padding: .6rem 0;
+        border: none;
+        border-radius: 4px;
+        background-color: $background-color-green;
+        font-size: 1.1rem;
+        color: #fff;
+    }
+}

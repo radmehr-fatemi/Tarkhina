@@ -15,9 +15,14 @@ import OkatebatBranchNonIranian from './OkatebatBranchNonIranian';
 import OkatebatBranchBanner from './OkatebatBranchBanner';
 import OkatebatBranchComment from './OkatebatBranchComment';
 
+//Components
+import Banner from "../../components/Banner";
+import Footer from '../Footer';
+
 const OkatebatBranch = () => {
     return (
         <div>
+            <Banner />
             <HomePageSearch />
             <OkatebatBranchOffer />
             <OkatebatBranchPopuler />
@@ -32,6 +37,7 @@ const OkatebatBranch = () => {
             
             <OkatebatBranchBanner />
             <OkatebatBranchComment />
+            <Footer />
         </div>
     );
 };

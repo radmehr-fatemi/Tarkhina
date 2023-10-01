@@ -11,11 +11,10 @@ import SignUp from './components/sign up/SignUp';
 import Login from './components/sign up/Login';
 import HomePage from './components/HomePage';
 import Navbar from './components/navbar/Navbar';
-import Banner from "./components/Banner";
-import Footer from './components/Footer';
 import OkatebatBranch from './components/branch/OkatebatBranch';
 import Menu from './components/menu/Menu';
 import MenuMain from './components/menu/MenuMain';
+import Cart from './components/cart/cart';
 
 const App = () => {
 
@@ -33,17 +32,14 @@ const App = () => {
         !!Object.keys(cookies).length ?
           <div>
             <Navbar />
-            <Banner />
             <Routes>
               <Route path='/' element={<HomePage />} />
               <Route path='/okatebatbranch' element={<OkatebatBranch />} />
-
+              <Route path='/cart' element={<Cart />} />
               <Route path='/menu/*' element={<Menu />} >
                 <Route path='main' element={<MenuMain />} />
               </Route>
-
             </Routes>
-            <Footer />
           </div> :
 
           <div>

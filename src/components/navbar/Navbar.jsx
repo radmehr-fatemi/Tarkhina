@@ -117,7 +117,7 @@ const Navbar = () => {
                     <Link className={styled.navbarIconsSearchImg} > <img src={searchSVG} alt="search" /> </Link>
                     <Link className={styled.navbarIconsProfileImg} > <img src={userSVG} alt="profile photo" /> </Link>
 
-                    <Link className={styled.navbarIconsCart} >
+                    <Link to="/cart" className={styled.navbarIconsCart} >
                         <img src={cartSVG} alt="shoping cart photo" />
                         {
                             state.itemsCounter > 0 &&
