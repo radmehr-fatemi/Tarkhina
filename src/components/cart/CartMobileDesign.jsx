@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate ,Link } from 'react-router-dom';
 import { Mousewheel, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -36,52 +36,60 @@ const CartMobileDesign = () => {
             </div>
 
             <div className="CartMobileDesignFields">
-                <div className="CartMobileDesignField1">
-                    <Swiper
-                        direction={'vertical'}
-                        slidesPerView={4}
-                        spaceBetween={0}
-                        mousewheel={true}
-                        pagination={{
-                            clickable: true,
-                        }}
-                        style={{
-                            "--swiper-pagination-color": "#66a57b",
-                            "--swiper-pagination-bullet-inactive-color": "#999999",
-                            "--swiper-pagination-bullet-inactive-opacity": "1",
-                            "--swiper-pagination-bullet-size": "9px",
-                            "--swiper-pagination-bullet-horizontal-gap": "6px",
-                            "--swiper-navigation-size": "25px",
-                          }}
-                        modules={[Mousewheel, Pagination]}
-                        className="mySwiper"
-                    >
-                        {
-                            state.selectedItems.map(food => <SwiperSlide>
+                {
+                    state.itemsCounter === 0 ?
+                        <div className='CartMobileDesignFieldsEmpty' >
+                            <p> سبد خرید شما خالی است </p>
+                            <Link to="/menu/main" > رفت به منو </Link>
+                        </div> :
 
-                                <div className='CartMobileDesignField1Product'>
+                        <div className="CartMobileDesignField1">
+                            <Swiper
+                                direction={'vertical'}
+                                slidesPerView={4}
+                                spaceBetween={0}
+                                mousewheel={true}
+                                pagination={{
+                                    clickable: true,
+                                }}
+                                style={{
+                                    "--swiper-pagination-color": "#66a57b",
+                                    "--swiper-pagination-bullet-inactive-color": "#999999",
+                                    "--swiper-pagination-bullet-inactive-opacity": "1",
+                                    "--swiper-pagination-bullet-size": "9px",
+                                    "--swiper-pagination-bullet-horizontal-gap": "6px",
+                                    "--swiper-navigation-size": "25px",
+                                }}
+                                modules={[Mousewheel, Pagination]}
+                                className="mySwiper"
+                            >
+                                {
+                                    state.selectedItems.map(food => <SwiperSlide>
 
-                                    <div className='CartMobileDesignField1ProductName'>
-                                        <h4> {food.name} </h4>
-                                        <span> {parseInt(food.price).toLocaleString()} </span>
-                                    </div>
-                                    <div className='CartMobileDesignField1ProductButtons'>
-                                        {
-                                            food.quantity > 1 ?
-                                            <button onClick={() => dispatch({ type: "DECREASE", payload: food })} >-</button> :
-                                            <button onClick={() => dispatch({ type: "REMOVE_ITEM", payload: food })} ><img src={trashGreenSVG} alt="trash photo" /></button>
-                                        }
-                                        <span> {food.quantity} </span>
-                                        <button onClick={() => dispatch({ type: "INCREASE", payload: food })} >+</button> 
-                                    </div>
+                                        <div className='CartMobileDesignField1Product'>
 
-                                </div>
+                                            <div className='CartMobileDesignField1ProductName'>
+                                                <h4> {food.name} </h4>
+                                                <span> {parseInt(food.price).toLocaleString()} </span>
+                                            </div>
+                                            <div className='CartMobileDesignField1ProductButtons'>
+                                                {
+                                                    food.quantity > 1 ?
+                                                        <button onClick={() => dispatch({ type: "DECREASE", payload: food })} >-</button> :
+                                                        <button onClick={() => dispatch({ type: "REMOVE_ITEM", payload: food })} ><img src={trashGreenSVG} alt="trash photo" /></button>
+                                                }
+                                                <span> {food.quantity} </span>
+                                                <button onClick={() => dispatch({ type: "INCREASE", payload: food })} >+</button>
+                                            </div>
 
-                            </SwiperSlide>)
-                        }
+                                        </div>
 
-                    </Swiper>
-                </div>
+                                    </SwiperSlide>)
+                                }
+
+                            </Swiper>
+                        </div>
+                }
 
 
                 <div className="CartMobileDesignField2" >
@@ -105,7 +113,7 @@ const CartMobileDesign = () => {
                         <h3> مبلغ قابل پرداخت </h3>
                         <span> {state.total.toLocaleString()} تومان </span>
                     </div>
-                    <button onClick={ () => dispatch({ type: "CHECKOUT" }) } > پرداخت </button>
+                    <button onClick={() => dispatch({ type: "CHECKOUT" })} > پرداخت </button>
                 </div>
             </div>
 
