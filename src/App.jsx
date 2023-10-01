@@ -14,7 +14,7 @@ import Navbar from './components/navbar/Navbar';
 import OkatebatBranch from './components/branch/OkatebatBranch';
 import Menu from './components/menu/Menu';
 import MenuMain from './components/menu/MenuMain';
-import Cart from './components/cart/cart';
+import Cart from './components/cart/Cart';
 
 const App = () => {
 
@@ -48,8 +48,8 @@ const App = () => {
               <Route path='/login' element={<Login />} />
             </Routes>
           </div>
-
       }
+
     </CartContextProvider>
   );
 };
