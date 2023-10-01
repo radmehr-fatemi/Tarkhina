@@ -8,7 +8,7 @@ $text-color-Span :#717171;
 $text-color-P :#A9791C;
 
 .CartMobileDesign {
-    padding: 1rem 2rem;
+    padding: 1rem 1.8rem;
     height: fit-content;
 }
 
@@ -34,7 +34,7 @@ $text-color-P :#A9791C;
 }
 
 .CartMobileDesignField1 {
-    height: 30vh;
+    height: 34vh;
     width: 100%;
     position: relative;
     padding-top: .4rem;
@@ -172,7 +172,7 @@ $text-color-P :#A9791C;
     margin: auto;
     display: flex;
     flex-direction: column;
-    padding-bottom: .6rem ;
+    padding-bottom: 1rem ;
 
     .CartMobileDesignField4price {
         display: flex;
