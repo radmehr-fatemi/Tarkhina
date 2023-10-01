@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link } from "react-router-dom";
 import { useCookies } from 'react-cookie';
 
@@ -16,6 +16,9 @@ import walletSVG from "../../assets/svg/wallet.svg";
 import heartSVG from "../../assets/svg/heart.svg";
 import locationSVG from "../../assets/svg/location.svg";
 import logoutSVG from "../../assets/svg/logout.svg";
+
+//Context
+import { CartContext } from '../context/CartContextProvider';
 
 //Components
 import HamburgerMenu from './HamburgerMenu';
@@ -52,6 +55,7 @@ const unShowMenuHandler = () => {
 const Navbar = () => {
 
     const [, , removeCookie] = useCookies();
+    const { state } = useContext(CartContext);
 
     return (
         <div className={styled.navbar} >
@@ -112,7 +116,14 @@ const Navbar = () => {
                 <div className={styled.navbarIconsSearch}>
                     <Link className={styled.navbarIconsSearchImg} > <img src={searchSVG} alt="search" /> </Link>
                     <Link className={styled.navbarIconsProfileImg} > <img src={userSVG} alt="profile photo" /> </Link>
-                    <Link> <img src={cartSVG} alt="shoping cart photo" /> </Link>
+
+                    <Link className={styled.navbarIconsCart} >
+                        <img src={cartSVG} alt="shoping cart photo" />
+                        {
+                            state.itemsCounter > 0 &&
+                            <span className={styled.navbarIconsCartItemsCounter} > {state.itemsCounter} </span>
+                        }
+                    </Link>
                 </div>
 
                 <span className={styled.navbarIconsProfile} onMouseEnter={showPrifileHandler} onMouseLeave={unShowPrifileHandler} alt="profile">
@@ -125,7 +136,7 @@ const Navbar = () => {
                             <li> <img src={walletSVG} alt="wallet photo" /> <Link> پیگیری سفارش </Link></li>
                             <li> <img src={heartSVG} alt="heart photo" /> <Link> علاقه‌مندی‌ها </Link></li>
                             <li> <img src={locationSVG} alt="location photo" /> <Link> آدرس‌های من </Link></li>
-                            <li onClick={ () => removeCookie("user") }> <img src={logoutSVG} alt="logout photo" /> <Link> خروج از حساب </Link></li>
+                            <li onClick={() => removeCookie("user")}> <img src={logoutSVG} alt="logout photo" /> <Link> خروج از حساب </Link></li>
                         </ol>
                     </div>
                 </span>

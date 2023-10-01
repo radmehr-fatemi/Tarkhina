@@ -40,6 +40,23 @@ $border-colorTwo: #dcdcdc;
     align-items: center;
     height: 30px;
 
+    .navbarIconsCart {
+        position: relative;
+
+        .navbarIconsCartItemsCounter {
+            position: absolute;
+            line-height: .8rem;
+            top: -.3rem;
+            right: -.2rem;
+            background-color: #138c00;
+            color: $background-color-white;
+            padding: 0 4px;
+            border-radius: 50%;
+            font-size: .7rem;
+            animation: ShowSpan .3s;
+        }
+    }
+    
     .navbarIconsSearch {
         display: flex;
         justify-content: space-between;
@@ -282,6 +299,20 @@ $border-colorTwo: #dcdcdc;
 
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes ShowSpan {
+    0% {
+        // opacity: 0;
+        top: 0;
+        right: 0;
+    }
+
+    100% {
+        // opacity: 1;
+        top: -.3rem;
+        right: -.2rem;
     }
 }
 
