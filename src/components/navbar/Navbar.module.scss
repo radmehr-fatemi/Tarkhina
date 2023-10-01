@@ -177,9 +177,9 @@ $border-colorTwo: #dcdcdc;
 
 .navbarMenuItemsBranchParents {
     position: absolute;
-    top: .5rem;
+    top: 0;
     right: -4rem;
-    padding-top: 1.5rem;
+    padding-top: 2rem;
     cursor: pointer;
     display: none;
     opacity: 0;
@@ -208,9 +208,9 @@ $border-colorTwo: #dcdcdc;
 
 .navbarMenuItemsBranchParents2 {
     position: absolute;
-    top: .5rem;
+    top: 0;
     right: -1rem;
-    padding-top: 1.5rem;
+    padding-top: 2rem;
     cursor: pointer;
     display: none;
     opacity: 0;

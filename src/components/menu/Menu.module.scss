@@ -2,7 +2,10 @@ $background-color: #EDEDED;
 $text-color: #717171;
 $text-hove-color: #008559;
 
-.meno {}
+.meno {
+    transition: all .3s;
+    animation: Show .3s;
+}
 
 .menuLinks {
     padding: 0 1rem;
@@ -41,6 +44,17 @@ $text-hove-color: #008559;
         }
 
 
+    }
+}
+
+
+//---------------keyframes------------------
+@keyframes Show {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
 

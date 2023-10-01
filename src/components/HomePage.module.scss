@@ -8,6 +8,18 @@ $boxShadow-color: #22473f;
 .homePage {
     text-align: center;
     min-width: 100vw;
+    transition: all .3s;
+    animation: Show .3s;
+}
+
+//---------------keyframes------------------
+@keyframes Show {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 //---------------768px-------------------

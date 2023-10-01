@@ -4,6 +4,8 @@ $text-color: #417F56;
 .okatebatBranchLink {
     display: flex;
     justify-content: center;
+    transition: all .3s;
+    animation: Show .3s;
     
     a {
         display: flex;
@@ -13,5 +15,15 @@ $text-color: #417F56;
         padding: .5rem 2rem;
         border: 1px solid $text-color;
         border-radius: 4px;
+    }
+}
+
+//---------------keyframes------------------
+@keyframes Show {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
