@@ -24,9 +24,8 @@ const discountCounter = (price, discount) => {
 const totalCounter = data => {
     const itemsCounter = data.selectedItems.reduce((acc, cur) => acc + cur.quantity, 0)
     const total = data.selectedItems.reduce((acc, cur) => acc + (cur.price * cur.quantity) * itemsCounter, 0)
-    const totalDiscount = data.selectedItems.reduce((acc, cur) => acc + cur.discount, 0)
-    const totalPriceDiscount = data.selectedItems.reduce((acc, cur) => acc + (total * totalDiscount) / 100, 0)
-    return { itemsCounter, total, totalDiscount, totalPriceDiscount }
+    const totalDiscount = data.selectedItems.reduce((acc, cur) => acc + discountCounter( cur.price ,cur.discount ), 0)
+    return { itemsCounter, total, totalDiscount }
 }
 
 const checkIsLiked = (id, data) => {

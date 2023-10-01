@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Mousewheel, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -8,10 +9,11 @@ import 'swiper/css/pagination';
 import styled from "./CartMobileDesign.scss";
 
 //SVG
-import arrowRightSVG from "./svg/arrow-right.svg";
+import backSVG from "./svg/back.svg";
 import trashBlackSVG from "./svg/trash-black.svg";
 import trashGreenSVG from "./svg/trash-green.svg";
 import warningSVG from "./svg/warning.svg";
+import negativegSVG from "./svg/negative.svg";
 
 //Context
 import { CartContext } from '../context/CartContextProvider';
@@ -22,14 +24,15 @@ import { findQuantity } from '../shared/function';
 const CartMobileDesign = () => {
 
     const { state, dispatch } = useContext(CartContext);
+    const navigate = useNavigate();
 
     return (
         <div className="CartMobileDesign">
 
             <div className="CartMobileDesignHeader">
-                <img src={arrowRightSVG} alt="arrow right photo" />
+                <img src={backSVG} alt="arrow right photo" onClick={() => navigate(-1)} />
                 <h3> سبد خرید </h3>
-                <img src={trashBlackSVG} alt="trash photo" />
+                <img src={trashBlackSVG} alt="trash photo" onClick={() => dispatch({ type: "CLEAR" })} />
             </div>
 
             <div className="CartMobileDesignFields">
@@ -37,11 +40,19 @@ const CartMobileDesign = () => {
                     <Swiper
                         direction={'vertical'}
                         slidesPerView={5}
-                        spaceBetween={10}
+                        spaceBetween={0}
                         mousewheel={true}
                         pagination={{
                             clickable: true,
                         }}
+                        style={{
+                            "--swiper-pagination-color": "#66a57b",
+                            "--swiper-pagination-bullet-inactive-color": "#999999",
+                            "--swiper-pagination-bullet-inactive-opacity": "1",
+                            "--swiper-pagination-bullet-size": "9px",
+                            "--swiper-pagination-bullet-horizontal-gap": "6px",
+                            "--swiper-navigation-size": "25px",
+                          }}
                         modules={[Mousewheel, Pagination]}
                         className="mySwiper"
                     >
@@ -52,12 +63,16 @@ const CartMobileDesign = () => {
 
                                     <div className='CartMobileDesignField1ProductName'>
                                         <h4> {food.name} </h4>
-                                        <span> {food.price} </span>
+                                        <span> {parseInt(food.price).toLocaleString()} </span>
                                     </div>
                                     <div className='CartMobileDesignField1ProductButtons'>
-                                        <button>+</button>
+                                        {
+                                            food.quantity > 1 ?
+                                            <button onClick={() => dispatch({ type: "DECREASE", payload: food })} >-</button> :
+                                            <button onClick={() => dispatch({ type: "REMOVE_ITEM", payload: food })} ><img src={trashGreenSVG} alt="trash photo" /></button>
+                                        }
                                         <span> {food.quantity} </span>
-                                        <button>-</button>
+                                        <button onClick={() => dispatch({ type: "INCREASE", payload: food })} >+</button> 
                                     </div>
 
                                 </div>
@@ -71,7 +86,7 @@ const CartMobileDesign = () => {
 
                 <div className="CartMobileDesignField2" >
                     <h3> تخفیف محصولات </h3>
-                    <span> {state.totalPriceDiscount} تومان </span>
+                    <span> {parseInt(state.totalDiscount).toLocaleString()} تومان </span>
                 </div>
 
                 <div className="CartMobileDesignField3">
@@ -88,9 +103,9 @@ const CartMobileDesign = () => {
                 <div className="CartMobileDesignField4">
                     <div className="CartMobileDesignField4price">
                         <h3> مبلغ قابل پرداخت </h3>
-                        <span> {state.total} تومان </span>
+                        <span> {state.total.toLocaleString()} تومان </span>
                     </div>
-                    <button> پرداخت </button>
+                    <button onClick={ () => dispatch({ type: "CHECKOUT" }) } > پرداخت </button>
                 </div>
             </div>
 
