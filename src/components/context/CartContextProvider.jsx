@@ -1,5 +1,8 @@
 import React, { createContext, useReducer } from 'react';
 
+//function
+import { totalCounter } from '../shared/function';
+
 const initialState = {
     selectedItems: [],
     itemsCounter: 0,
@@ -9,6 +12,7 @@ const initialState = {
 }
 
 const cartReducer = (state, action) => {
+    // console.log( state  )
     switch (action.type) {
         case "ADD_ITEM":
             if (!state.selectedItems.find(item => item.id === action.payload.id)) {
@@ -20,7 +24,8 @@ const cartReducer = (state, action) => {
             return {
                 ...state,
                 selectedItems: [...state.selectedItems],
-                checkout: false
+                checkout: false,
+                ...totalCounter( state )
             }
 
         case "REMOVE_ITEM":
@@ -29,7 +34,8 @@ const cartReducer = (state, action) => {
 
             return {
                 ...state,
-                selectedItems: [...state.selectedItems]
+                selectedItems: [...state.selectedItems],
+                ...totalCounter( state )
             }
 
         case "INCREASE":
@@ -39,7 +45,8 @@ const cartReducer = (state, action) => {
             return {
                 ...state,
                 selectedItems: [...state.selectedItems],
-                checkout: false
+                checkout: false,
+                ...totalCounter( state )
             }
 
         case "DECREASE":
@@ -48,7 +55,8 @@ const cartReducer = (state, action) => {
 
             return {
                 ...state,
-                selectedItems: [...state.selectedItems]
+                selectedItems: [...state.selectedItems],
+                ...totalCounter( state )
             }
 
         case "LIKED_ITEM":
@@ -56,6 +64,9 @@ const cartReducer = (state, action) => {
                 state.likedItems.push({
                     ...action.payload
                 })
+            } else {
+                const indexL = state.likedItems.findIndex( item => item.id === action.payload.id );
+                state.likedItems.splice( indexL ,1 )
             }
 
             return {

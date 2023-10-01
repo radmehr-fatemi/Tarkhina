@@ -4,7 +4,7 @@ import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
 import { useCookies } from 'react-cookie';
 
 //Context
-import CartContextProvider from './components/shared/svg/CartContextProvider';
+import CartContextProvider from './components/context/CartContextProvider';
 
 //Components
 import SignUp from './components/sign up/SignUp';

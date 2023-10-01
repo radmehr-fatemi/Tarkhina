@@ -35,10 +35,10 @@ const Footer = () => {
                         <h1> شعبه‌های ترخینه </h1>
 
                         <ul>
-                            <li><Link> شعبه اکباتان </Link></li>
-                            <li><Link> شعبه چالوس </Link></li>
-                            <li><Link> شعبه اقدسیه </Link></li>
-                            <li><Link> شعبه ونک </Link></li>
+                            <li><Link to="/okatebatbranch" > شعبه اکباتان </Link></li>
+                            <li><Link to="/okatebatbranch" > شعبه چالوس </Link></li>
+                            <li><Link to="/okatebatbranch" > شعبه اقدسیه </Link></li>
+                            <li><Link to="/okatebatbranch" > شعبه ونک </Link></li>
                         </ul>
                     </div>
                 </div>

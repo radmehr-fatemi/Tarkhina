@@ -33,6 +33,10 @@ $border-color : #cecece;
     overflow: hidden;
     transition: all .3s;
 
+    &:nth-child(1) {
+        border: 1px solid #417F56;
+    }
+
     div {
         &:nth-child(1) {
             width: 46%;

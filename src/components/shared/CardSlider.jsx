@@ -5,14 +5,15 @@ import styled from "./CardSlider.module.scss";
 
 //SVG
 import heartSVG from "../../assets/svg/heart.svg";
+import hearRedSVG from "./svg/heart-red.svg";
 import starSVG from "../../assets/svg/star.svg";
 import trashSVG from "./svg/trash.svg";
 
 //Context
-import { CartContext } from './svg/CartContextProvider';
+import { CartContext } from '../context/CartContextProvider';
 
 //function
-import { findQuantity } from './function';
+import { findQuantity, discountCounter, checkIsLiked } from './function';
 
 const CardSlider = ({ foodData }) => {
 
@@ -28,10 +29,23 @@ const CardSlider = ({ foodData }) => {
 
             <div className={styled.cardSliderFields}>
                 <div className={styled.cardSliderField1}>
-                    <img src={heartSVG} alt="like photo" onClick={() => dispatch({ type: "LIKED_ITEM", payload: foodData })} />
+
+                    <div className={ styled.cardSliderField1Hearts }>
+                    {
+                        checkIsLiked(id, state) ?
+                        <img className={styled.cardSliderField1Heart1} src={hearRedSVG} alt="like photo" onClick={() => dispatch({ type: "LIKED_ITEM", payload: foodData })} /> :
+                        <img className={styled.cardSliderField1Heart2} src={heartSVG} alt="like photo" onClick={() => dispatch({ type: "LIKED_ITEM", payload: foodData })} />
+                    }
+                    </div>
+
                     <div className={styled.cardSliderField1spans}>
-                        <span> {parseInt("220000").toLocaleString()} </span>
-                        <span> {discount} % </span>
+                        {
+                            discount > 0 &&
+                            <div>
+                                <span> {parseInt(price).toLocaleString()} </span>
+                                <span> {discount} % </span>
+                            </div>
+                        }
                     </div>
                 </div>
 
@@ -40,7 +54,7 @@ const CardSlider = ({ foodData }) => {
                         <img src={starSVG} alt="star photo" />
                         <span> {stars} </span>
                     </div>
-                    <span> {parseInt(price).toLocaleString()} تومان </span>
+                    <span> {parseInt(discountCounter(price, discount)).toLocaleString()} تومان </span>
                 </div>
             </div>
 
@@ -57,7 +71,7 @@ const CardSlider = ({ foodData }) => {
                         <span> {findQuantity(id, state.selectedItems)} </span>
 
                         {findQuantity(id, state.selectedItems) === 1 &&
-                            <button onClick={() => dispatch({ type: "REMOVE_ITEM", payload: foodData })} > <img src={ trashSVG } alt="trash photo" /> </button>
+                            <button onClick={() => dispatch({ type: "REMOVE_ITEM", payload: foodData })} > <img src={trashSVG} alt="trash photo" /> </button>
                         }
 
                         {findQuantity(id, state.selectedItems) > 1 &&

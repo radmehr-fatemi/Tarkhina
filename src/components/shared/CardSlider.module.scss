@@ -36,10 +36,12 @@ $background-hover-green :#54976a;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 20%;
 }
 
 
 .cardSliderField1 {
+    height: 50%;
     padding-bottom: .2rem;
     display: flex;
     justify-content: space-between;
@@ -49,8 +51,25 @@ $background-hover-green :#54976a;
         &:nth-child(1) {
             width: 15px;
             cursor: pointer;
+            transition: all .3s;
         }
     }
+
+    .cardSliderField1Hearts {
+        width: 20%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+        .cardSliderField1Heart1 {
+            animation: ShowLiked1 .25s;
+        }
+
+        .cardSliderField1Heart2 {
+            animation: ShowLiked2 .25s;
+        }
 
     .cardSliderField1spans {
         display: flex;
@@ -182,6 +201,26 @@ $background-hover-green :#54976a;
     100% {
         width: 80%;
         height: 100%;
+    }
+}
+
+@keyframes ShowLiked1 {
+    0% {
+        width: 20px;
+    }
+
+    100% {
+        width: 15px;
+    }
+}
+
+@keyframes ShowLiked2 {
+    0% {
+        width: 18px;
+    }
+
+    100% {
+        width: 15px;
     }
 }
 

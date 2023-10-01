@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
+import { useCookies } from 'react-cookie';
 
 //Style
 import styled from "./Navbar.module.scss";
@@ -35,7 +36,6 @@ const showBranchHandler = () => {
 const unShowBranchHandler = () => {
     const item = document.getElementsByClassName(styled.navbarMenuItemsBranchParents)[0]
     item.classList.remove(styled.showBranchMenu)
-    console.log( item.classList )
 }
 
 const showMenuHandler = () => {
@@ -45,12 +45,13 @@ const showMenuHandler = () => {
 const unShowMenuHandler = () => {
     const item = document.getElementsByClassName(styled.navbarMenuItemsBranchParents2)[0]
     item.classList.remove(styled.showBranchMenu)
-    console.log( item.classList )
 }
 
 
 
 const Navbar = () => {
+
+    const [, , removeCookie] = useCookies();
 
     return (
         <div className={styled.navbar} >
@@ -72,11 +73,11 @@ const Navbar = () => {
                         <Link to='/' >صفحه اصلی</Link>
                     </li>
 
-                    <li className={ styled.navbarBranch } onMouseEnter={showBranchHandler} onMouseLeave={unShowBranchHandler} >
+                    <li className={styled.navbarBranch} onMouseEnter={showBranchHandler} onMouseLeave={unShowBranchHandler} >
                         <Link to='/branch' > شعبه</Link>
                         <img src={arrowDownSVG} alt="arrow-down-branch" />
 
-                        <div className={ styled.navbarMenuItemsBranchParents }>
+                        <div className={styled.navbarMenuItemsBranchParents}>
                             <ol className={styled.navbarMenuItemsBranch}>
                                 <li><Link to="/okatebatbranch"> اکباتان </Link></li>
                                 <li><Link to="/okatebatbranch"> چالوس </Link></li>
@@ -86,11 +87,11 @@ const Navbar = () => {
                         </div>
                     </li>
 
-                    <li className={ styled.navbarBranch }  onMouseEnter={showMenuHandler} onMouseLeave={unShowMenuHandler} >
+                    <li className={styled.navbarBranch} onMouseEnter={showMenuHandler} onMouseLeave={unShowMenuHandler} >
                         <Link to='/menu/main' > منو </Link>
                         <img src={arrowDownSVG} alt="arrow-down-menu" />
 
-                        <div className={ styled.navbarMenuItemsBranchParents2 }  >
+                        <div className={styled.navbarMenuItemsBranchParents2}  >
                             <ol className={styled.navbarMenuItemsBranch}>
                                 <li><Link to="/menu/main"> غذای اصلی </Link></li>
                                 <li><Link to="/menu/main"> پیش غذا </Link></li>
@@ -109,11 +110,11 @@ const Navbar = () => {
 
             <div className={styled.navbarIcons} >
                 <div className={styled.navbarIconsSearch}>
-                    <Link className={ styled.navbarIconsSearchImg } > <img src={searchSVG} alt="search" /> </Link>
-                    <Link className={ styled.navbarIconsProfileImg } > <img src={userSVG} alt="profile photo" /> </Link>
+                    <Link className={styled.navbarIconsSearchImg} > <img src={searchSVG} alt="search" /> </Link>
+                    <Link className={styled.navbarIconsProfileImg} > <img src={userSVG} alt="profile photo" /> </Link>
                     <Link> <img src={cartSVG} alt="shoping cart photo" /> </Link>
                 </div>
-                
+
                 <span className={styled.navbarIconsProfile} onMouseEnter={showPrifileHandler} onMouseLeave={unShowPrifileHandler} alt="profile">
                     <img className={styled.navbarIconsProfileImg1} src={userSVG} alt="profile" />
                     <img className={styled.navbarIconsProfileImg2} src={arrowDownSVG} alt="profile" />
@@ -124,7 +125,7 @@ const Navbar = () => {
                             <li> <img src={walletSVG} alt="wallet photo" /> <Link> پیگیری سفارش </Link></li>
                             <li> <img src={heartSVG} alt="heart photo" /> <Link> علاقه‌مندی‌ها </Link></li>
                             <li> <img src={locationSVG} alt="location photo" /> <Link> آدرس‌های من </Link></li>
-                            <li> <img src={logoutSVG} alt="logout photo" /> <Link> خروج از حساب </Link></li>
+                            <li onClick={ () => removeCookie("user") }> <img src={logoutSVG} alt="logout photo" /> <Link> خروج از حساب </Link></li>
                         </ol>
                     </div>
                 </span>

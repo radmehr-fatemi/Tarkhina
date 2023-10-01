@@ -15,7 +15,7 @@ const HomePageTerkhinehTour = () => {
             <h1> ترخینه گردی </h1>
 
             <div className={styled.homePageTerkhinehTourItems}>
-                <Link className={ styled.homePageTerkhinehCard }>
+                <Link to="/okatebatbranch" className={ styled.homePageTerkhinehCard }>
                     <div>
                         <img src={okatebatImg} alt="branch photo" />
                     </div>

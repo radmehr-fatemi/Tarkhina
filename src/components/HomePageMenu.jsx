@@ -20,28 +20,28 @@ const HomePageMenu = () => {
 
             <ul>
                 <li>
-                    <Link>
+                    <Link to="/menu/main" >
                         <img src={mainCourseImage} alt="food photo" />
                         <p>غذای اصلی</p>
                     </Link>
                 </li>
 
                 <li>
-                    <Link>
+                    <Link to="/menu/main" >
                         <img src={appetizerImage} alt="food photo" />
                         <p> پیش غذا </p>
                     </Link>
                 </li>
 
                 <li>
-                    <Link>
+                    <Link to="/menu/main" >
                         <img src={dessertImage} alt="food photo" />
                         <p> دسر </p>
                     </Link>
                 </li>
 
                 <li>
-                    <Link>
+                    <Link to="/menu/main" >
                         <img src={drinkImage} alt="food photo" />
                         <p> نوشیدنی </p>
                     </Link>

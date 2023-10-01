@@ -24,7 +24,7 @@ const OkatebatBranch = () => {
             <OkatebatBranchNonIranian />
 
             <div className={ styled.okatebatBranchLink }>
-                <Link>
+                <Link to="/menu/main" >
                     <img src={notesSVG} alt="notes photo" />
                     مشاهده منوی کامل
                 </Link>

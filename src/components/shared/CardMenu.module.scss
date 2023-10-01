@@ -94,12 +94,22 @@ $background-hover-green :#54976a;
     align-items: center;
     justify-content: space-between;
 
-    // img {
-    //     &:nth-child(1) {
+    .cardMenuField3Hearts {
+        width: 10%;
 
-    //     }
-    // }
+        img {
+            width: 16px;
+            cursor: pointer;
+        }
 
+        .cardSliderField1Heart1 {
+            animation: ShowLiked1 .25s;
+        }
+
+        .cardSliderField1Heart2 {
+            animation: ShowLiked2 .25s;
+        }
+    }
 }
 
 .cardMenuField3Button {
@@ -114,7 +124,7 @@ $background-hover-green :#54976a;
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 40% ;
+        width: 40%;
         height: 100%;
         padding: 0;
         border: none;
@@ -167,24 +177,44 @@ $background-hover-green :#54976a;
 @keyframes ShowButton1 {
     0% {
         width: 0%;
-        height: 50%;
+        // height: 50%;
     }
 
     100% {
         width: 80%;
-        height: 100%;
+        // height: 100%;
     }
 }
 
 @keyframes ShowButton2 {
     0% {
-        height: 10%;
+        // height: 10%;
         width: 0;
     }
 
     100% {
         width: 100%;
-        height: 100%;
+        // height: 100%;
+    }
+}
+
+@keyframes ShowLiked1 {
+    0% {
+        width: 20px;
+    }
+
+    100% {
+        width: 15px;
+    }
+}
+
+@keyframes ShowLiked2 {
+    0% {
+        width: 18px;
+    }
+
+    100% {
+        width: 15px;
     }
 }
 

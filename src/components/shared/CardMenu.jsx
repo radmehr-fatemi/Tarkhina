@@ -1,20 +1,20 @@
-import React ,{ useContext } from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 
 //Style
 import styled from "./CardMenu.module.scss";
 
 //SVG
-import heartSVG from "./svg/heart.svg";
 import starSVG from "./svg/star.svg";
 import trashSVG from "./svg/trash.svg";
+import heartSVG from "../../assets/svg/heart.svg";
+import hearRedSVG from "./svg/heart-red.svg";
 
 //Context
-import { CartContext } from './svg/CartContextProvider';
+import { CartContext } from '../context/CartContextProvider';
 
 //function
-import { shortHandler } from './function';
-import { findQuantity } from './function';
+import { shortHandler, findQuantity, discountCounter, checkIsLiked } from './function';
 
 const CardMenu = ({ foodData }) => {
 
@@ -34,18 +34,30 @@ const CardMenu = ({ foodData }) => {
                 <div className={styled.cardMenuField1}>
                     <h4> {name} </h4>
                     <div className={styled.cardMenuField1Spans}>
-                        <span> 220000 </span>
-                        <span> % {discount} </span>
+                        {
+                            discount > 0 &&
+                            <div>
+                                <span> {price} </span>
+                                <span> % {discount} </span>
+                            </div>
+                        }
                     </div>
                 </div>
 
                 <div className={styled.cardMenuField2}>
                     <p> {shortHandler(title)} ... </p>
-                    <span> {(+price).toLocaleString()}  تومان  </span>
+                    <span> {(+discountCounter(price, discount)).toLocaleString()}  تومان  </span>
                 </div>
 
                 <div className={styled.cardMenuField3}>
-                    <img src={heartSVG} alt="heart photo" />
+                    <div className={styled.cardMenuField3Hearts}>
+                        {
+                            checkIsLiked(id, state) ?
+                                <img className={styled.cardSliderField1Heart1} src={hearRedSVG} alt="like photo" onClick={() => dispatch({ type: "LIKED_ITEM", payload: foodData })} /> :
+                                <img className={styled.cardSliderField1Heart2} src={heartSVG} alt="like photo" onClick={() => dispatch({ type: "LIKED_ITEM", payload: foodData })} />
+                        }
+                    </div>
+
                     <div className={styled.cardMenuField3Spans}>
                         <img src={starSVG} alt="star photo" />
                         <img src={starSVG} alt="star photo" />
