@@ -8,8 +8,8 @@ import styled from "./LikedItems.module.scss";
 import { CartContext } from '../context/CartContextProvider';
 
 //SVG
-import backSVG from "./svg/back.svg";
-import trashBlackSVG from "./svg/trash-black.svg";
+import backSVG from "./svg/arrow-back.svg";
+import trashBlackSVG from "./svg/trashBlack.svg";
 
 //Components
 import CardMenu from '../shared/CardMenu';
