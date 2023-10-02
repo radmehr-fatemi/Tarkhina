@@ -1,0 +1,334 @@
+$border-color: #d4d4d4;
+$background-color2: #d9ffdecc;
+$background-color-green: #417F56;
+$background-color-green-hove: #008a6a;
+$text-color-H3 :#353535;
+$text-color-Span :#717171;
+$text-color-P :#A9791C;
+
+.CartPcDesign {
+    padding: 2rem 4rem;
+    height: 58vh;
+}
+
+.CartPcDesignHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1%;
+
+    a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-decoration: none;
+        font-weight: 600;
+        color: $background-color-green;
+        padding: 0 .2rem 0 .4rem;
+        border: 2px solid $background-color-green;
+        border-radius: 6px;
+        transition: all .3s;
+
+        &:hover {
+            border: 2px solid $background-color-green-hove;
+            transition: all .3s;
+        }
+
+        img {
+            width: 26px;
+            margin-left: .4rem;
+        }
+    }
+
+    h2 {
+        color: $text-color-H3;
+    }
+
+    img {
+        width: 26px;
+        cursor: pointer;
+    }
+}
+
+.CartPcDesignProductField {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.CartPcDesignProducts {
+    width: 54%;
+    overflow: auto;
+    max-height: 100%;
+    border: 1px solid $border-color;
+    padding: .4rem;
+    border-radius: 6px;
+    transition: all .3s;
+
+    h2 {
+        width: 100%;
+
+    }
+
+    &::-webkit-scrollbar {
+        width: 8px;
+        transition: all .3s;
+    }
+
+    &::-webkit-scrollbar-track {
+        // background: #d7dfdd;
+        box-shadow: inset 0 0 5px rgb(224, 224, 224);
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #6e807b;
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background: $background-color-green-hove;
+        transition: all .3s;
+    }
+}
+
+//--------------CartPcDesignProduct-----------------
+.CartPcDesignProduct {
+    width: 90%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid $border-color;
+    border-radius: 6px;
+    overflow: hidden;
+    margin: .4rem auto;
+}
+
+.CartPcDesignProductImage {
+    height: 100%;
+    width: 35%;
+
+    img {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.CartPcDesignProductFields {
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: .4rem;
+}
+
+.CartPcDesignProductField1,
+.CartPcDesignProductField2,
+.CartPcDesignProductField3 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    h2 {
+        font-size: 1.2rem;
+    }
+}
+
+.CartPcDesignProductField1 {
+
+    img {
+        cursor: pointer;
+    }
+}
+
+.CartPcDesignProductField2 {
+
+    .CartPcDesignProductField2Spans {
+        display: flex;
+
+        span {
+            &:nth-child(1) {
+                color: #c6c6c6;
+                text-decoration: line-through;
+                font-size: .8rem;
+            }
+
+            &:nth-child(2) {
+                color: red;
+                margin-right: 4px;
+                padding: .2rem;
+                background-color: rgb(255, 201, 201);
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
+
+.CartPcDesignProductField3 {
+
+    span {
+        font-size: 1.1rem;
+    }
+
+    .CartPcDesignProductField3Star {
+        width: 35%;
+    }
+
+    .CartPcDesignProductField3Button {
+        width: 20%;
+        background-color: $background-color2;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        button {
+            height: 100%;
+            border: none;
+            background: none;
+            color: #417F56;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        span {
+            font-size: .9rem;
+        }
+    }
+}
+
+//--------------CartContextFields-----------
+.CartContextFields {
+    width: 44%;
+    // height: 60%;
+    padding: 1rem 2rem;
+    border: 1px solid $border-color;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.CartContextField1,
+.CartContextField3 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h3 {
+        font-size: 1rem;
+    }
+}
+
+.CartContextField1 {
+    padding: .8rem 0;
+    border-bottom: 1px solid $border-color;
+}
+
+.CartContextField2 {
+    padding-top: .5rem;
+    border-bottom: 1px solid $border-color;
+
+    .CartContextField2SentPrice {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    p {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: .6rem 0;
+        color: $text-color-P;
+    }
+}
+
+
+.CartContextField3 {
+    padding: .6rem 0;
+}
+
+.CartContextField4 {
+    width: 100%;
+    text-align: center;
+
+    button {
+        width: 60%;
+        padding: .4rem;
+        background-color: $background-color-green;
+        border: none;
+        border-radius: 4px;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 600;
+        transition: all .3s;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $background-color-green-hove;
+            transition: all .3s;
+        }
+    }
+}
+
+//----------CartContextFieldsEmpty-----------
+.CartContextFieldsEmpty {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p {
+        font-size: 1.2rem;
+        padding: .6rem 0;
+    }
+
+    img {
+        width: 100px;
+    }
+
+    a {
+        width: 20%;
+        height: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: $background-color-green;
+        border: 2px solid $background-color-green;
+        border-radius: 4px;
+        font-size: 1.1rem;
+        font-weight: 700;
+        transition: all .3s;
+
+        &:hover {
+            color: $background-color-green-hove;
+            border: 2px solid $background-color-green-hove;
+            transition: all .3s;
+        }
+    }
+}
+
+
+//------------------768px---------------------------
+@media (max-Width : 768px) {
+    .CartPcDesign {
+        display: none;
+    }
+
+    .CartContextFooter {
+        display: none;
+    }
+}

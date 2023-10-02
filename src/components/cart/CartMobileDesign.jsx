@@ -6,14 +6,16 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 //Style
-import styled from "./CartMobileDesign.scss";
+import  "./CartMobileDesign.scss";
 
 //SVG
 import backSVG from "./svg/back.svg";
 import trashBlackSVG from "./svg/trash-black.svg";
 import trashGreenSVG from "./svg/trash-green.svg";
 import warningSVG from "./svg/warning.svg";
-import negativegSVG from "./svg/negative.svg";
+
+//GIF
+import ghostGIF from "./gif/ghost.gif";
 
 //Context
 import { CartContext } from '../context/CartContextProvider';
@@ -40,6 +42,7 @@ const CartMobileDesign = () => {
                     state.itemsCounter === 0 ?
                         <div className='CartMobileDesignFieldsEmpty' >
                             <p> سبد خرید شما خالی است </p>
+                            <img src={ghostGIF } alt="kitty photo" />
                             <Link to="/menu/main" > رفت به منو </Link>
                         </div> :
 
@@ -94,7 +97,7 @@ const CartMobileDesign = () => {
 
                 <div className="CartMobileDesignField2" >
                     <h3> تخفیف محصولات </h3>
-                    <span> {parseInt(state.totalDiscount).toLocaleString()} تومان </span>
+                    <span> { !state.totalDiscount ? 0 :parseInt(state.totalDiscount).toLocaleString() } تومان </span>
                 </div>
 
                 <div className="CartMobileDesignField3">

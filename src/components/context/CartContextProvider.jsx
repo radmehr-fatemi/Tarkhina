@@ -51,7 +51,7 @@ const cartReducer = (state, action) => {
 
         case "DECREASE":
             const indexD = state.selectedItems.findIndex(item => item.id === action.payload.id)
-            state.selectedItems[indexD].quantity--
+            state.selectedItems[indexD].quantity > 0 ? state.selectedItems[indexD].quantity-- : null
 
             return {
                 ...state,
@@ -91,6 +91,9 @@ const cartReducer = (state, action) => {
                 total: 0,
                 checkout: true
             }
+
+            default:
+                return state
     }
 }
 

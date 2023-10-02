@@ -204,7 +204,7 @@ $text-color-P :#A9791C;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 30% 0;
+    padding: 20% 0;
 
     p {
         font-size: 1.4rem;
@@ -214,7 +214,7 @@ $text-color-P :#A9791C;
     a {
         text-decoration: none;
         color: $text-color-green;
-        padding: .2rem 2rem;
+        padding: .1rem 1.8rem;
         font-size: 1.2rem;
         border: 2px solid $text-color-green;
         border-radius: 8px;
@@ -232,4 +232,11 @@ $text-color-P :#A9791C;
         width: 20px;
         // opacity: 1;
     }
+}
+
+//----------------------------768px--------------------------------
+@media ( min-width : 768px ) {
+ .CartMobileDesign {
+    display: none;
+ }   
 }

@@ -1,6 +1,6 @@
-const shortHandler = text => {
+const shortHandler = ( text ,number ) => {
     const splited = text.split("")
-    const finalText = splited.slice(0, 18)
+    const finalText = splited.slice(0, number)
     return finalText
 }
 

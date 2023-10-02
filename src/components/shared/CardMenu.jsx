@@ -46,7 +46,7 @@ const CardMenu = ({ foodData }) => {
                 </div>
 
                 <div className={styled.cardMenuField2}>
-                    <p> {shortHandler(title)} ... </p>
+                    <p> {shortHandler(title ,18)} ... </p>
                     <span> {(+discountCounter(price, discount)).toLocaleString()}  تومان  </span>
                 </div>
 
