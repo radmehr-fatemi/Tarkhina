@@ -134,7 +134,7 @@ const Navbar = () => {
                         <ol className={styled.navbarMenuItemsProfile}>
                             <li> <img src={userDarkSVG} alt="profile photo" /> <Link> پروفایل </Link></li>
                             <li> <img src={walletSVG} alt="wallet photo" /> <Link> پیگیری سفارش </Link></li>
-                            <li> <img src={heartSVG} alt="heart photo" /> <Link> علاقه‌مندی‌ها </Link></li>
+                            <li> <img src={heartSVG} alt="heart photo" /> <Link to="/likeditems" > علاقه‌مندی‌ها </Link></li>
                             <li> <img src={locationSVG} alt="location photo" /> <Link> آدرس‌های من </Link></li>
                             <li onClick={() => removeCookie("user")}> <img src={logoutSVG} alt="logout photo" /> <Link> خروج از حساب </Link></li>
                         </ol>

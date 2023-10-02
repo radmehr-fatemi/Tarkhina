@@ -48,7 +48,7 @@ $text-color-P :#A9791C;
 
     .swiper-slide {
         width: 80%;
-        margin:  auto;
+        margin: 0 auto;
         padding: .2rem;
         background-color: $background-color1;
         // border-radius: 10px;
@@ -83,17 +83,19 @@ $text-color-P :#A9791C;
 .CartMobileDesignField1ProductButtons {
     background-color: antiquewhite;
     // height: 100%;
-    width: 30%;
+    width: fit-content;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: $background-color2;
     padding: .2rem;
     transition: all .3s;
+    animation: ShowButton .3s;
 
     button {
         height: 100%;
-        width: 20px;
+        // width: 20px;
+        padding: .2rem .4rem;
         border: none;
         color: $text-color-green;
         background: none;
@@ -103,12 +105,14 @@ $text-color-P :#A9791C;
         
         img {
             width: 15px;
+            transition: all .3s;
             animation: ShowButton .3s;
         }
     }
     
     span {
         color: #078a00;
+        padding: .2rem;
         transition: all .3s;
         animation: ShowButton .3s;
     }
@@ -205,6 +209,7 @@ $text-color-P :#A9791C;
     align-items: center;
     justify-content: center;
     padding: 20% 0;
+    transition: all .3s;
 
     p {
         font-size: 1.4rem;
@@ -224,13 +229,13 @@ $text-color-P :#A9791C;
 //-------------------keyframes---------------------
 @keyframes ShowButton {
     0% {
-        width: 25px;
-        // opacity: 0;
+        width: 0;
+        opacity: 0;
     }
 
     100% {
-        width: 20px;
-        // opacity: 1;
+        width: 100%;
+        opacity: .4;
     }
 }
 

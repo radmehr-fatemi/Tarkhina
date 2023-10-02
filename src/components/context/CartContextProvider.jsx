@@ -71,6 +71,17 @@ const cartReducer = (state, action) => {
 
             return {
                 ...state,
+                likedItems : [ ...state.likedItems ]
+            }
+
+            case "CLEAR_LIKEDITEMS":
+                return {
+                    ...state,
+                    likedItems : []
+                }
+
+            return {
+                ...state,
                 likedItems: [...state.likedItems]
             }
 

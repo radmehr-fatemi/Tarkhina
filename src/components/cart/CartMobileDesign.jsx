@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
-import { useNavigate ,Link } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { Mousewheel, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
 //Style
-import  "./CartMobileDesign.scss";
+import "./CartMobileDesign.scss";
 
 //SVG
 import backSVG from "./svg/back.svg";
@@ -42,7 +42,7 @@ const CartMobileDesign = () => {
                     state.itemsCounter === 0 ?
                         <div className='CartMobileDesignFieldsEmpty' >
                             <p> سبد خرید شما خالی است </p>
-                            <img src={ghostGIF } alt="kitty photo" />
+                            <img src={ghostGIF} alt="kitty photo" />
                             <Link to="/menu/main" > رفت به منو </Link>
                         </div> :
 
@@ -67,7 +67,7 @@ const CartMobileDesign = () => {
                                 className="mySwiper"
                             >
                                 {
-                                    state.selectedItems.map(food => <SwiperSlide>
+                                    state.selectedItems.map(food => <SwiperSlide key={ food.id } >
 
                                         <div className='CartMobileDesignField1Product'>
 
@@ -97,7 +97,7 @@ const CartMobileDesign = () => {
 
                 <div className="CartMobileDesignField2" >
                     <h3> تخفیف محصولات </h3>
-                    <span> { !state.totalDiscount ? 0 :parseInt(state.totalDiscount).toLocaleString() } تومان </span>
+                    <span> {!state.totalDiscount ? 0 : parseInt(state.totalDiscount).toLocaleString()} تومان </span>
                 </div>
 
                 <div className="CartMobileDesignField3">
