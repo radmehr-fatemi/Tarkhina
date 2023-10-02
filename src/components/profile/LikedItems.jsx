@@ -8,7 +8,7 @@ import styled from "./LikedItems.module.scss";
 import { CartContext } from '../context/CartContextProvider';
 
 //SVG
-import backSVG from "./svg/back.svg";
+import backSVG from "./Svg/back.svg";
 import trashBlackSVG from "./svg/trash-black.svg";
 
 //Components
