@@ -182,7 +182,7 @@ $background-hover-green :#54976a;
     }
 
     100% {
-        width: 80%;
+        width: 50%;
         // height: 100%;
     }
 }
@@ -190,34 +190,34 @@ $background-hover-green :#54976a;
 @keyframes ShowButton2 {
     0% {
         // height: 10%;
-        width: 0;
+        width: 58%;
     }
 
     100% {
-        width: 100%;
+        // width: 66%;
         // height: 100%;
     }
 }
 
-@keyframes ShowLiked1 {
-    0% {
-        width: 20px;
-    }
+// @keyframes ShowLiked1 {
+//     0% {
+//         width: 20px;
+//     }
 
-    100% {
-        width: 15px;
-    }
-}
+//     100% {
+//         width: 15px;
+//     }
+// }
 
-@keyframes ShowLiked2 {
-    0% {
-        width: 18px;
-    }
+// @keyframes ShowLiked2 {
+//     0% {
+//         width: 18px;
+//     }
 
-    100% {
-        width: 15px;
-    }
-}
+//     100% {
+//         width: 15px;
+//     }
+// }
 
 //-------------------768px-----------------
 @media (min-width : 768px) {
