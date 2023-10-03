@@ -114,7 +114,7 @@ const Navbar = () => {
 
             <div className={styled.navbarIcons} >
                 <div className={styled.navbarIconsSearch}>
-                    <Link className={styled.navbarIconsSearchImg} > <img src={searchSVG} alt="search" /> </Link>
+                    <Link to="menu/main" className={styled.navbarIconsSearchImg} > <img src={searchSVG} alt="search" /> </Link>
                     <Link className={styled.navbarIconsProfileImg} > <img src={userSVG} alt="profile photo" /> </Link>
 
                     <Link to="/cart" className={styled.navbarIconsCart} >

@@ -51,14 +51,11 @@ $placeHolder-color : #353535;
     display: none;
 }
 
-.homePageInputSearchProductsShow {
-    display: block;
-}
-
 //-----------homePageInputSearchNon------------
 .homePageInputSearchNon {
     width: 100%;
-    height: 50vh;
+    height: 300px;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -75,6 +72,7 @@ $placeHolder-color : #353535;
     }
 }
 
+//------------keyframes--------------
 @keyframes ShowSearched {
     0% {
         transform: translateY(100%);

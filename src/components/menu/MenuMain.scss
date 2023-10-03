@@ -37,7 +37,10 @@ $placeHolder-color : #353535;
     }
 }
 
+
+//-----------MenuMainSearch------------
 .MenuMainSearch {
+    position: relative;
     width: 40%;
     margin: auto;
     border: 1px solid $border-color;
@@ -61,8 +64,46 @@ $placeHolder-color : #353535;
         }
     }
 
-    img {
+    img[alt="search photo"] {
         width: 17px;
+    }
+
+    .MenuMainSearchProducts {
+        position: fixed;
+        top: 62%;
+        left: 0;
+        padding: .4rem 14%;
+        width: 100vw;
+        min-height: 60vh;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+        backdrop-filter: blur(10px);
+        background-color: #1ea26234;
+        z-index: 10;
+        transition: all .3s;
+        animation: ShowSearched .3s;
+        display: none;
+    }
+
+    .MenuMainSearchNon {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        transition: all .3s;
+
+        p {
+            font-size: 1.8rem;
+        }
+
+        img {
+            width: 200px;
+        transition: all .3s;
+    }
     }
 }
 
@@ -114,6 +155,17 @@ $placeHolder-color : #353535;
     flex-wrap: wrap;
 }
 
+//------------keyframes--------------
+@keyframes ShowSearched {
+    0% {
+        transform: translateY(100%);
+        backdrop-filter: blur(0);
+    }
+    
+    100% {
+        transform: translateY(0%);
+    }
+}
 
 //------------------768px------------------
 @media (min-width : 768px) {
@@ -132,12 +184,12 @@ $placeHolder-color : #353535;
     .MenuMainFields {
         padding: .4rem 1.2vw .4rem 5vw;
     }
-    
+
     .MenuMainField1 {
-        
+
         h3 {
             font-size: 1.3rem;
         }
-        
+
     }
 }
