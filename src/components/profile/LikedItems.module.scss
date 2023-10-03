@@ -46,8 +46,11 @@ $color-green-hover:#007a5b;
     justify-content: center;
     align-items: center;
     padding: 1rem;
+    transition: all .3s;
 
-    // img {}
+    img {
+        transition: all .3s;
+    }
 
     a {
         text-decoration: none;
