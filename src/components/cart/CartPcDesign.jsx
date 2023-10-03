@@ -48,10 +48,10 @@ const CartPcDesign = () => {
                                     <Link to="/menu/main" > رفتن به منو </Link>
                                 </div> :
 
-                                state.selectedItems.map(food => <div key={ food.id } className={styled.CartPcDesignProduct}>
+                                state.selectedItems.map(food => <div key={food.id} className={styled.CartPcDesignProduct}>
 
                                     <div className={styled.CartPcDesignProductImage}>
-                                        <img src={food.image} alt="food photo" />
+                                        <Link to={`/details/${food.id}`} ><img src={food.image} alt="food photo" /></Link>
                                     </div>
 
                                     <div className={styled.CartPcDesignProductFields}>

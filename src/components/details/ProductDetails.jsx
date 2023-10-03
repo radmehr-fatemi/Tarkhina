@@ -61,7 +61,7 @@ const ProductDetails = (props) => {
                     <div className={styled.productDetailsFields}>
                         <div className={styled.productDetailsField1}>
                             <h4> محتویات </h4>
-                            <p> بادمجان، گوجه فرنگی، کدو سبز، پیاز، رب گوجه فرنگی، روغن زیتون، پنیر پارمزان </p>
+                            <p> { title } </p>
                         </div>
 
                         <div className={styled.productDetailsField2}>

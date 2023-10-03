@@ -36,7 +36,7 @@ const CardMenu = ({ foodData }) => {
                         {
                             discount > 0 &&
                             <div>
-                                <span> {price} </span>
+                                <span> { parseInt( price ).toLocaleString() } </span>
                                 <span> % {discount} </span>
                             </div>
                         }

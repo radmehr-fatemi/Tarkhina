@@ -67,10 +67,13 @@ const CartMobileDesign = () => {
                                 className="mySwiper"
                             >
                                 {
-                                    state.selectedItems.map(food => <SwiperSlide key={ food.id } >
-
+                                    state.selectedItems.map(food => <SwiperSlide key={food.id} >
                                         <div className='CartMobileDesignField1Product'>
-
+                                            <div className='CartMobileDesignField1ProductIMG'>
+                                                <Link to={`/details/${food.id}`}>
+                                                    <img src={food.image} alt="food photo" />
+                                                </Link>
+                                            </div>
                                             <div className='CartMobileDesignField1ProductName'>
                                                 <h4> {food.name} </h4>
                                                 <span> {parseInt(food.price).toLocaleString()} </span>
@@ -78,15 +81,14 @@ const CartMobileDesign = () => {
                                             <div className='CartMobileDesignField1ProductButtons'>
                                                 {
                                                     food.quantity > 1 ?
-                                                        <button onClick={() => dispatch({ type: "DECREASE", payload: food })} >-</button> :
-                                                        <button onClick={() => dispatch({ type: "REMOVE_ITEM", payload: food })} ><img src={trashGreenSVG} alt="trash photo" /></button>
+                                                        <button className='CartMobileDesignField1ProductButton1' onClick={() => dispatch({ type: "DECREASE", payload: food })} >-</button> :
+                                                        <button className='CartMobileDesignField1ProductButton2' onClick={() => dispatch({ type: "REMOVE_ITEM", payload: food })} ><img src={trashGreenSVG} alt="trash photo" /></button>
                                                 }
                                                 <span> {food.quantity} </span>
                                                 <button onClick={() => dispatch({ type: "INCREASE", payload: food })} >+</button>
                                             </div>
 
                                         </div>
-
                                     </SwiperSlide>)
                                 }
 
