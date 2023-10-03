@@ -29,8 +29,6 @@ const totalCounter = data => {
 }
 
 const checkIsLiked = (id, data) => {
-    console.log(data )
-    console.log(id)
     if (data.likedItems.find(item => item.id == id)) {
         return true
     } else {
@@ -41,7 +39,6 @@ const checkIsLiked = (id, data) => {
 
 const setStars = (stars, src1, src2) => {
     const image = []
-    // const imageEmpty = []
     for (let i = stars; i > 0; i--) {
         image.push(<img src={src1} alt="star photo" />)
     }

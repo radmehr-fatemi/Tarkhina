@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 
 //Style
 import styled from "./CardSlider.module.scss";
@@ -23,7 +24,7 @@ const CardSlider = ({ foodData }) => {
     return (
         <div className={styled.cardSlider}>
             <div className={styled.cardSliderImg}>
-                <img src={image} alt="food photo" />
+              <Link to={ `/details/${ id }` } ><img src={image} alt="food photo" /></Link>
                 <h1> {name} </h1>
             </div>
 

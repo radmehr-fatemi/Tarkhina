@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link ,useNavigate } from 'react-router-dom';
 
 import styled from "./ProductDetails.module.scss";
 
@@ -29,12 +29,13 @@ const ProductDetails = (props) => {
     const state2 = state
     const foodData = overallData[id - 1];
     const { name, image, title, discount, price, stars  } = foodData;
-
+    const navigate = useNavigate();
+    
     return (
         <div className={styled.productDetails} >
 
                 <div  className={styled.productDetailsHead} >
-                    <img src={backSVG} alt="" />
+                    <img src={backSVG} alt="back photo" onClick={ () => navigate( -1 ) } />
                     <h1> صفحه محصول </h1>
                 </div>
 
