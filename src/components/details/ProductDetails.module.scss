@@ -6,9 +6,10 @@ $background-hover: #009b53;
     width: 100vw;
     height: fit-content;
     padding: 1rem;
+    transition: all .3s;
 }
 
-.productDetailsForFlex {}
+// .productDetailsForFlex {}
 
 .productDetailsHead {
     display: flex;
@@ -23,6 +24,7 @@ $background-hover: #009b53;
     img {
         width: 26px;
         margin-left: 20%;
+        cursor: pointer;
     }
 }
 
@@ -69,6 +71,7 @@ $background-hover: #009b53;
         // align-items: center;
 
         img {
+            cursor: pointer;
 
             &:nth-child(1) {
                 width: 20px;
@@ -125,8 +128,10 @@ $background-hover: #009b53;
         color: #fff;
         width: 60%;
         height: 100%;
+        font-weight: 600;
         transition: all .3s;
         animation: ShowButton .3s;
+        cursor: pointer;
     }
 }
 
@@ -141,10 +146,12 @@ $background-hover: #009b53;
     button {
         width: 20%;
         height: 100%;
+        cursor: pointer;
     }
 
     img {
         width: 18px;
+        cursor: pointer;
     }
 
     span {
@@ -167,8 +174,80 @@ $background-hover: #009b53;
         width: 24px;
     }
 }
+
 @keyframes ShowLiked2 {
     0% {
         width: 22px;
+    }
+}
+
+//--------------------768px---------------------
+@media (min-width : 768px) {
+
+    .productDetailsForFlex {
+        display: flex;
+        height: 70vh;
+    }
+
+    .productDetailsHead {
+        padding: 1rem;
+        margin-bottom: 1rem;
+
+        img {
+            margin: 0 30% 0 4rem;
+        }
+    }
+
+    .productDetailsImg {
+        width: 65%;
+        height: 100%;
+        padding: 2rem;
+        border: 1px solid $border-color;
+        border-radius: 8px;
+        box-shadow: 4px 4px 12px #6c7f78 inset;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    .productDetailsMain {
+        height: fit-content;
+        padding-top: 0%;
+    }
+
+    .productDetailsHeader {
+        padding: .4rem .4rem .8rem .8rem;
+
+        h3 {
+            font-size: 1.4rem;
+        }
+
+        img {
+            margin: auto;
+        }
+    }
+
+    .productDetailsFields {
+        h4 {
+            font-size: 1.2rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            font-weight: 200;
+        }
+    }
+
+    .productDetailsField4 {
+
+        button {
+            transition: all .3s;
+
+            &:hover {
+                background-color: #008b62;
+                transition: all .3s;
+            }
+        }
     }
 }
