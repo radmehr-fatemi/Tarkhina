@@ -1,0 +1,174 @@
+$border-color: #b9b9b9;
+$background-color: #007a41;
+$background-hover: #009b53;
+
+.productDetails {
+    width: 100vw;
+    height: fit-content;
+    padding: 1rem;
+}
+
+.productDetailsForFlex {}
+
+.productDetailsHead {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 .6rem .8rem .6rem;
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    img {
+        width: 26px;
+        margin-left: 20%;
+    }
+}
+
+
+.productDetailsImg {
+    width: 100%;
+    text-align: center;
+
+    img {
+        width: 48vh;
+        height: 30vh;
+        border-radius: 8px;
+    }
+}
+
+.productDetailsMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: .8rem;
+}
+
+.productDetailsHeader,
+.productDetailsField2,
+.productDetailsField3 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.productDetailsHeader {
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    .productDetailsHeaderItems {
+        width: 16%;
+        display: flex;
+        justify-content: space-between;
+        // align-items: center;
+
+        img {
+
+            &:nth-child(1) {
+                width: 20px;
+            }
+        }
+
+        .productDetailsHeaderItemsIMG1 {
+            animation: ShowLiked1 .3s;
+        }
+
+        .productDetailsHeaderItemsIMG2 {
+            animation: ShowLiked2 .3s;
+        }
+    }
+}
+
+
+.productDetailsFields {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: .6rem;
+    border: 1px solid $border-color;
+    border-radius: 8px;
+}
+
+.productDetailsField1 {
+    padding-bottom: 1rem;
+
+    p {
+        padding: .1rem;
+        font-size: .9rem;
+    }
+}
+
+.productDetailsField2 {
+    border-bottom: 1px solid $border-color;
+    border-top: 1px solid $border-color;
+}
+
+// .productDetailsField3 {}
+
+.productDetailsField4 {
+    text-align: center;
+    width: 100%;
+    height: 5vh;
+    margin-top: .4rem;
+
+    button {
+        background: $background-color;
+        border: none;
+        border-radius: 4px;
+        color: #fff;
+        width: 60%;
+        height: 100%;
+        transition: all .3s;
+        animation: ShowButton .3s;
+    }
+}
+
+.productDetailsField4Buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 100%;
+    margin: auto;
+
+    button {
+        width: 20%;
+        height: 100%;
+    }
+
+    img {
+        width: 18px;
+    }
+
+    span {
+        // height: 100%;
+        padding: .2rem .6rem;
+        margin: 0 4px;
+        border-bottom: 2px solid $background-color;
+    }
+}
+
+//-------------------keyframes-------------------
+@keyframes ShowButton {
+    0% {
+        width: 0%;
+    }
+}
+
+@keyframes ShowLiked1 {
+    0% {
+        width: 24px;
+    }
+}
+@keyframes ShowLiked2 {
+    0% {
+        width: 22px;
+    }
+}

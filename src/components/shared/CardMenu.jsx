@@ -25,10 +25,8 @@ const CardMenu = ({ foodData }) => {
     return (
         <div className={styled.cardMenu}>
 
-            {/* <div className={ styled.cardMenuOverall }></div> */}
-
             <div className={styled.cardMenuImg}>
-                <Link> <img src={image} alt="food photo" /> </Link>
+                <Link to={ `/details/${ id }` } > <img src={image} alt="food photo" /> </Link>
             </div>
 
             <div className={styled.cardMenuFields}>

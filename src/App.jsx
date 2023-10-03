@@ -16,6 +16,7 @@ import Menu from './components/menu/Menu';
 import MenuMain from './components/menu/MenuMain';
 import Cart from './components/cart/Cart';
 import LikedItems from './components/profile/LikedItems';
+import ProductDetails from './components/details/ProductDetails';
 
 const App = () => {
 
@@ -38,6 +39,7 @@ const App = () => {
               <Route path='/okatebatbranch' element={<OkatebatBranch />} />
               <Route path='/cart' element={<Cart />} />
               <Route path='/likeditems' element={<LikedItems />} />
+              <Route path='/details/:id' element={<ProductDetails />} />
               <Route path='/menu/*' element={<Menu />} >
                 <Route path='main' element={<MenuMain />} />
               </Route>

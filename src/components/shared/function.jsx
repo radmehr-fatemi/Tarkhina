@@ -1,11 +1,11 @@
-const shortHandler = ( text ,number ) => {
+const shortHandler = (text, number) => {
     const splited = text.split("")
     const finalText = splited.slice(0, number)
     return finalText
 }
 
 const findQuantity = (id, data) => {
-    const findItem = data.find(item => item.id === id)
+    const findItem = data.find(item => item.id == id)
     if (!!findItem) {
         const quantity = findItem.quantity
         return quantity
@@ -24,12 +24,14 @@ const discountCounter = (price, discount) => {
 const totalCounter = data => {
     const itemsCounter = data.selectedItems.reduce((acc, cur) => acc + cur.quantity, 0)
     const total = data.selectedItems.reduce((acc, cur) => acc + (cur.price * cur.quantity) * itemsCounter, 0)
-    const totalDiscount = data.selectedItems.reduce((acc, cur) => acc + discountCounter( cur.price ,cur.discount ), 0)
+    const totalDiscount = data.selectedItems.reduce((acc, cur) => acc + discountCounter(cur.price, cur.discount), 0)
     return { itemsCounter, total, totalDiscount }
 }
 
 const checkIsLiked = (id, data) => {
-    if (data.likedItems.find(item => item.id === id)) {
+    console.log(data )
+    console.log(id)
+    if (data.likedItems.find(item => item.id == id)) {
         return true
     } else {
         return false
