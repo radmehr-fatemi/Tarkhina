@@ -4,7 +4,10 @@ $placeHolder-color : #353535;
 //-----------------homePageSearch------------------
 .homePageSearch {
     padding: .8rem;
-    position: relative;
+    // position: static;
+    top: 4rem;
+    z-index: 200;
+    width: 100%;
 }
 
 //------------homePageInputSearch-----------------
@@ -16,6 +19,7 @@ $placeHolder-color : #353535;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    background-color: #fff;
 
     input {
         width: 80%;
@@ -43,7 +47,7 @@ $placeHolder-color : #353535;
     width: 100%;
     background-color: #ffffff76;
     backdrop-filter: blur(22px);
-    min-height: 60vh;
+    min-height: 80vh;
     padding: .2rem .4rem;
     z-index: 10;
     transition: all .3s;
@@ -54,8 +58,8 @@ $placeHolder-color : #353535;
 //-----------homePageInputSearchNon------------
 .homePageInputSearchNon {
     width: 100%;
-    height: 300px;
-    padding: 2rem;
+    // height: 300px;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -67,7 +71,7 @@ $placeHolder-color : #353535;
     }
     
     img {
-        width: 60%;
+        width: 50%;
         transition: all .3s;
     }
 }

@@ -30,7 +30,7 @@ const HomePageSearch = () => {
 
     return (
         <div>
-            <div className={style.homePageSearch}>
+            <div className={style.homePageSearch} style={touched ? { position: "absolute" } : { position: "static" }} >
 
                 <div className={style.homePageInputSearch} >
                     <input type="text" placeholder=' جست و جو ' value={input} onChange={changeHandler} />
