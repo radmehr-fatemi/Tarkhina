@@ -17,6 +17,7 @@ import MenuMain from './components/menu/MenuMain';
 import Cart from './components/cart/Cart';
 import LikedItems from './components/profile/LikedItems';
 import ProductDetails from './components/details/ProductDetails';
+import AboutUs from './components/about us/AboutUs';
 
 const App = () => {
 
@@ -40,6 +41,7 @@ const App = () => {
               <Route path='/cart' element={<Cart />} />
               <Route path='/likeditems' element={<LikedItems />} />
               <Route path='/details/:id' element={<ProductDetails />} />
+              <Route path='/aboutus' element={<AboutUs />} />
               <Route path='/menu/*' element={<Menu />} >
                 <Route path='main' element={<MenuMain />} />
               </Route>

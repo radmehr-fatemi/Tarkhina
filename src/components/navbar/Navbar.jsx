@@ -105,9 +105,9 @@ const Navbar = () => {
                         </div>
                     </li>
 
-                    <li><Link to='/' > اعطای نمایندگی </Link></li>
-                    <li><Link to='/' > درباره ما </Link></li>
-                    <li><Link to='/' > تماس با ما </Link></li>
+                    <li><Link > اعطای نمایندگی </Link></li>
+                    <li><Link to='/aboutus' > درباره ما </Link></li>
+                    <li><Link  > تماس با ما </Link></li>
                 </ul>
 
             </div>
