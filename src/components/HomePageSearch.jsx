@@ -5,6 +5,7 @@ import style from "./HomePageSearch.module.scss";
 
 //SVG
 import searchSVG from "../assets/svg/searchHome.svg";
+import crossSVG from "../assets/svg/cross.svg";
 
 //Gif
 import searchNonGIF from "../assets/gif/research-non.gif";
@@ -26,13 +27,19 @@ const HomePageSearch = () => {
         target.value.length ? setTouched(true) : setTouched(false)
     }
 
+    const crossHandler = () => {
+        setTouched( false )
+        seInput("")
+    }
+    
     const searchProducts = overallData.filter(food => food.name.split(" ")[0].includes(input) ?? food.name.includes(input))
 
     return (
         <div>
-            <div className={style.homePageSearch} style={touched ? { position: "absolute" } : { position: "static" }} >
+            <div className={style.homePageSearch}  style={touched ? { position: "fixed" } : { position: "static" }} >
 
                 <div className={style.homePageInputSearch} >
+                    <img src={ crossSVG } alt="cross photo"  onClick={ crossHandler } style={touched ? { display: "block" } : { display: "none" }} />
                     <input type="text" placeholder=' جست و جو ' value={input} onChange={changeHandler} />
                     <img src={searchSVG} alt="search photo" />
                 </div>

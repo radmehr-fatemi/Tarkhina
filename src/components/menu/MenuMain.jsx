@@ -10,6 +10,7 @@ import { v4 } from 'uuid';
 import arrowLeftSVG from "./svg/arrow-left-home.svg";
 import searchSVG from "./svg/search.svg";
 import cartSVG from "../../assets/svg/cart.svg";
+import crossSVG from "../../assets/svg/cross.svg";
 
 //Gif
 import searchNonGIF from "../../assets/gif/research-non.gif";
@@ -34,6 +35,11 @@ const MenuMain = () => {
         target.value.length ? setTouched(true) : setTouched(false)
     }
 
+    const crossHandler = () => {
+        setTouched( false )
+        seInput("")
+    }
+    
     useEffect(() => {
         inputSearch.current.focus()
     }, [])
@@ -95,18 +101,19 @@ const MenuMain = () => {
                 </div>
 
                 <div className={"MenuMainSearch"} >
+                    <img src={crossSVG} alt="cross photo" onClick={crossHandler} style={touched ? { display: "block" } : { display: "none" }} />
                     <input ref={inputSearch} type="text" placeholder=' جست و جو ' value={input} onChange={changeHandler} />
                     <img src={searchSVG} alt="search photo" />
 
-                    <div className='MenuMainSearchProducts' style={ touched ? { display: "flex" } : { display: "none" } }  >
+                    <div className='MenuMainSearchProducts' style={touched ? { display: "flex" } : { display: "none" }}  >
                         {
                             searchProducts.length ?
-                            searchProducts.map(food => <CardMenu key={food.id} foodData={food} />) :
+                                searchProducts.map(food => <CardMenu key={food.id} foodData={food} />) :
 
-                            <div className='MenuMainSearchNon' >
-                                <p> محصول یافت نشد </p>
-                                <img src={ searchNonGIF } alt="search photo" />
-                            </div>
+                                <div className='MenuMainSearchNon' >
+                                    <p> محصول یافت نشد </p>
+                                    <img src={searchNonGIF} alt="search photo" />
+                                </div>
                         }
                     </div>
                 </div>
