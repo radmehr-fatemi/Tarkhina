@@ -5,7 +5,7 @@ import style from "./HomePageSearch.module.scss";
 
 //SVG
 import searchSVG from "../assets/svg/searchHome.svg";
-import crossSVG from "../assets/svg/cross.svg";
+import crossSVG from "../assets/svg/cross2.svg";
 
 //Gif
 import searchNonGIF from "../assets/gif/research-non.gif";
