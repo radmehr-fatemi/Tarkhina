@@ -51,13 +51,15 @@ $background-brown: #c4ced2;
     p {
         font-size: .8rem;
         line-height: 1.2rem;
+        padding-left: .2rem;
 
         &:nth-child(1) {
             width: 100%;
         }
 
         &:nth-child(2) {
-            width: 190%;
+            width: 198%;
+            padding-left: .8rem;
         }
     }
 }
@@ -65,11 +67,11 @@ $background-brown: #c4ced2;
 .aboutUsField2IMG {
     width: fit-content;
     height: fit-content;
-    padding: .1rem;
+    padding-bottom: .4rem;
 
     img {
-        width: 160px;
-        height: 110px;
+        width: 20vh;
+        height: 12vh;
         border-radius: 4px;
     }
 }
@@ -85,6 +87,7 @@ $background-brown: #c4ced2;
     justify-content: space-between;
     padding: 1rem 0;
     background-color: $background-brown;
+    margin-top: .4rem;
 
     img {
         width: 20px;
