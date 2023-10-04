@@ -144,7 +144,7 @@ $background-hover-green :#54976a;
         &:nth-child(1) {
             font-size: .8rem;
             width: 100%;
-            animation: ShowButton2 .2s;
+            animation: ShowButton1 .2s;
         }
     }
 
@@ -168,7 +168,7 @@ $background-hover-green :#54976a;
 
         button {
             width: 40%;
-            animation: ShowButton2 .3s;
+            animation: ShowButton2 .3s ;
         }
     }
 }
@@ -177,12 +177,12 @@ $background-hover-green :#54976a;
 //--------------keyframes--------------
 @keyframes ShowButton1 {
     0% {
-        width: 0%;
+        width: 50%;
         // height: 50%;
     }
 
     100% {
-        width: 50%;
+        // width: 10%;
         // height: 100%;
     }
 }
@@ -190,11 +190,11 @@ $background-hover-green :#54976a;
 @keyframes ShowButton2 {
     0% {
         // height: 10%;
-        width: 58%;
+        width: 20%;
     }
 
     100% {
-        // width: 66%;
+        // width: 606%;
         // height: 100%;
     }
 }
