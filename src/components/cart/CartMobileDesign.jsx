@@ -38,13 +38,21 @@ const CartMobileDesign = () => {
             </div>
 
             <div className="CartMobileDesignFields">
+                {console.log( state.checkout )}
                 {
-                    state.itemsCounter === 0 ?
+                    (state.checkout && state.itemsCounter === 0) ?  
+                        <div className='CartMobileDesignFieldsEmpty' >
+                            <p> پرداخت با موفقیت انجام شد</p>
+                            {/* <img src={ghostGIF} alt="kitty photo" /> */}
+                            <Link to="/menu/main" > رفت به منو </Link>
+                        </div> :
+
+                    ( !state.checkout && state.itemsCounter === 0 ) ?  
                         <div className='CartMobileDesignFieldsEmpty' >
                             <p> سبد خرید شما خالی است </p>
                             <img src={ghostGIF} alt="kitty photo" />
                             <Link to="/menu/main" > رفت به منو </Link>
-                        </div> :
+                        </div>  :
 
                         <div className="CartMobileDesignField1">
                             <Swiper

@@ -39,14 +39,22 @@ const CartPcDesign = () => {
 
                 <div className={styled.CartPcDesignProductField}>
 
+                {console.log( state.itemsCounter ) }
                     <div className={styled.CartPcDesignProducts}>
                         {
-                            state.itemsCounter === 0 ?
-                                <div className={styled.CartContextFieldsEmpty} >
-                                    <p> سبد خرید شما خالی است </p>
-                                    <img src={ghostGIF} alt="ghost photo" />
-                                    <Link to="/menu/main" > رفتن به منو </Link>
-                                </div> :
+                       (state.checkout && state.itemsCounter === 0) ?  
+                       <div className='CartMobileDesignFieldsEmpty' >
+                           <p> پرداخت با موفقیت انجام شد</p>
+                           {/* <img src={ghostGIF} alt="kitty photo" /> */}
+                           <Link to="/menu/main" > رفت به منو </Link>
+                       </div> :
+
+                   ( !state.checkout && state.itemsCounter === 0 ) ?  
+                       <div className='CartMobileDesignFieldsEmpty' >
+                           <p> سبد خرید شما خالی است </p>
+                           <img src={ghostGIF} alt="kitty photo" />
+                           <Link to="/menu/main" > رفت به منو </Link>
+                       </div>  :
 
                                 state.selectedItems.map(food => <div key={food.id} className={styled.CartPcDesignProduct}>
 
