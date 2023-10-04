@@ -29,7 +29,7 @@ $background-brown: #c4ced2;
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-content: flex-start;
     justify-content: center;
 }
 
@@ -45,33 +45,38 @@ $background-brown: #c4ced2;
 .aboutUsField2 {
     width: 100%;
     padding: 0 1rem;
+    display: flex;
+    justify-content: flex-start;
 
     p {
-        width: 100%;
         font-size: .8rem;
         line-height: 1.2rem;
+
+        &:nth-child(1) {
+            width: 100%;
+        }
+
+        &:nth-child(2) {
+            width: 190%;
+        }
     }
 }
 
-.aboutUsField2Flex {
-    display: flex;
-
-}
-
-.aboutUsField2FlexText {
-    padding-left: .4rem;
-    width: 60%;
-}
-
 .aboutUsField2IMG {
-    width: 160px;
-    height: 110px;
-    border-radius: 4px;
+    width: fit-content;
+    height: fit-content;
+    padding: .1rem;
+
+    img {
+        width: 160px;
+        height: 110px;
+        border-radius: 4px;
+    }
 }
 
-.aboutUsField2Text {
-    padding-bottom: .2rem;
-}
+// .aboutUsField2Text {
+//     padding-bottom: .2rem;
+// }
 
 
 .aboutUsField3 {
@@ -98,4 +103,71 @@ $background-brown: #c4ced2;
         justify-content: center;
         width: calc(100vw / 4);
     }
+}
+
+//-----------------768px---------------------
+@media (min-width : 768px) {
+
+    .aboutUsBanner {
+        p {
+            font-size: 2rem;
+        }
+    }
+
+    .aboutUsField1 {
+        width: 70%;
+        margin: auto;
+
+        h3 {
+            font-size: 1.8rem;
+        }
+    }
+
+    .aboutUsField2 {
+        width: 70%;
+        margin: auto;
+        padding: 0 1rem;
+        display: flex;
+        justify-content: center;
+    
+        p {
+            font-size: 1.1rem;
+            line-height: 2rem;
+            padding-left: .4rem;
+
+            &:nth-child(1) {
+                width: fit-content;
+            }
+    
+            &:nth-child(2) {
+                width: fit-content;
+            }
+        }
+    }
+
+    .aboutUsField2FlexText {
+        width: fit-content;
+    }
+    
+    .aboutUsField2IMG {
+
+        img {
+            width: 30vw;
+            height: 48vh;
+        }
+    }
+    
+    .aboutUsField3 {
+        padding: 1.6rem 0;
+        margin-top: .8rem;
+    
+        img {
+            width: 40px;
+        }
+    
+        span {
+            font-size: 1.2rem;
+        }
+    }
+    
 }
