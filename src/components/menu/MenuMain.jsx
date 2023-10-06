@@ -10,7 +10,7 @@ import { v4 } from 'uuid';
 import arrowLeftSVG from "./svg/arrow-left-home.svg";
 import searchSVG from "./svg/search.svg";
 import cartSVG from "../../assets/svg/cart.svg";
-import crossSVG from "../../assets/svg/cross.svg";
+import crossSVG from "../../assets/svg/cross2.svg";
 
 //Gif
 import searchNonGIF from "../../assets/gif/research-non.gif";

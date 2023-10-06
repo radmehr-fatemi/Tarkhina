@@ -79,7 +79,8 @@ $placeHolder-color : #353535;
         left: 0;
         padding: .4rem 14%;
         width: 100vw;
-        min-height: 60vh;
+        height: 60vh;
+        overflow: auto;
         display: flex;
         flex-wrap: wrap;
         align-items: flex-start;
@@ -90,6 +91,21 @@ $placeHolder-color : #353535;
         transition: all .3s;
         animation: ShowSearched .3s;
         display: none;
+
+        &::-webkit-scrollbar {
+            width: 6px;
+            transition: all .3s;
+        }
+    
+        &::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px rgb(174, 174, 174);
+            border-radius: 10px;
+        }
+    
+        &::-webkit-scrollbar-thumb {
+            background: #6e807b;
+            border-radius: 10px;
+        }
     }
 
     .MenuMainSearchNon {
