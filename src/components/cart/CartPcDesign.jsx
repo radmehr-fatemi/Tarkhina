@@ -39,56 +39,58 @@ const CartPcDesign = () => {
 
                 <div className={styled.CartPcDesignProductField}>
 
-                {console.log( state.itemsCounter ) }
                     <div className={styled.CartPcDesignProducts}>
                         {
-                       (state.checkout && state.itemsCounter === 0) ?  
-                       <div className='CartMobileDesignFieldsEmpty' >
-                           <p> پرداخت با موفقیت انجام شد</p>
-                           {/* <img src={ghostGIF} alt="kitty photo" /> */}
-                           <Link to="/menu/main" > رفت به منو </Link>
-                       </div> :
+                            (state.checkout && state.itemsCounter === 0) ?
+                                <div className='CartMobileDesignFieldsEmpty' >
+                                    <p> پرداخت با موفقیت انجام شد</p>
+                                    {/* <img src={ghostGIF} alt="kitty photo" /> */}
+                                    <Link to="/menu/main" > رفت به منو </Link>
+                                </div> :
 
-                   ( !state.checkout && state.itemsCounter === 0 ) ?  
-                       <div className='CartMobileDesignFieldsEmpty' >
-                           <p> سبد خرید شما خالی است </p>
-                           <img src={ghostGIF} alt="kitty photo" />
-                           <Link to="/menu/main" > رفت به منو </Link>
-                       </div>  :
+                                (!state.checkout && state.itemsCounter === 0) ?
+                                    <div className='CartMobileDesignFieldsEmpty' >
+                                        <p> سبد خرید شما خالی است </p>
+                                        <img src={ghostGIF} alt="kitty photo" />
+                                        <Link to="/menu/main" > رفت به منو </Link>
+                                    </div> :
 
-                                state.selectedItems.map(food => <div key={food.id} className={styled.CartPcDesignProduct}>
+                                    state.selectedItems.map(food => <div key={food.id} className={styled.CartPcDesignProduct}>
 
-                                    <div className={styled.CartPcDesignProductImage}>
-                                        <Link to={`/details/${food.id}`} ><img src={food.image} alt="food photo" /></Link>
-                                    </div>
-
-                                    <div className={styled.CartPcDesignProductFields}>
-                                        <div className={styled.CartPcDesignProductField1}>
-                                            <h2> {food.name} </h2>
-                                            <img src={trashBlackSVG} alt="trash photo" onClick={() => dispatch({ type: "REMOVE_ITEM", payload: food })} />
+                                        <div className={styled.CartPcDesignProductImage}>
+                                            <Link to={`/details/${food.id}`} ><img src={food.image} alt="food photo" /></Link>
                                         </div>
 
-                                        <div className={styled.CartPcDesignProductField2}>
-                                            <p> {shortHandler(food.title, 30)} ... </p>
-                                            <div className={styled.CartPcDesignProductField2Spans}>
-                                                <span> {parseInt(food.price).toLocaleString()} </span>
-                                                <span> {food.discount} % </span>
+                                        <div className={styled.CartPcDesignProductFields}>
+                                            <div className={styled.CartPcDesignProductField1}>
+                                                <h2> {food.name} </h2>
+                                                <img src={trashBlackSVG} alt="trash photo" onClick={() => dispatch({ type: "REMOVE_ITEM", payload: food })} />
                                             </div>
-                                        </div>
 
-                                        <div className={styled.CartPcDesignProductField3}>
-                                            <div className={styled.CartPcDesignProductField3Star}>
-                                                {setStars(food.stars, starSVG, starEmptySVG)}
+                                            <div className={styled.CartPcDesignProductField2}>
+                                                <p> {shortHandler(food.title, 30)} ... </p>
+                                                {
+                                                    food.discount > 0 &&
+                                                    <div className={styled.CartPcDesignProductField2Spans}>
+                                                        <span> {parseInt(food.price).toLocaleString()} </span>
+                                                        <span> {food.discount} % </span>
+                                                    </div>
+                                                }
                                             </div>
-                                            <div className={styled.CartPcDesignProductField3Button}>
-                                                <button onClick={() => dispatch({ type: "INCREASE", payload: food })} >+</button>
-                                                <span> {food.quantity} </span>
-                                                <button onClick={() => dispatch({ type: "DECREASE", payload: food })} >-</button>
+
+                                            <div className={styled.CartPcDesignProductField3}>
+                                                <div className={styled.CartPcDesignProductField3Star}>
+                                                    {setStars(food.stars, starSVG, starEmptySVG)}
+                                                </div>
+                                                <div className={styled.CartPcDesignProductField3Button}>
+                                                    <button onClick={() => dispatch({ type: "INCREASE", payload: food })} >+</button>
+                                                    <span> {food.quantity} </span>
+                                                    <button onClick={() => dispatch({ type: "DECREASE", payload: food })} >-</button>
+                                                </div>
+                                                <span> {(parseInt(discountCounter(food.price, food.discount))).toLocaleString()} تومان </span>
                                             </div>
-                                            <span> {(parseInt(discountCounter(food.price, food.discount))).toLocaleString()} تومان </span>
                                         </div>
-                                    </div>
-                                </div>)
+                                    </div>)
                         }
                     </div>
 

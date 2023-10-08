@@ -23,8 +23,9 @@ const discountCounter = (price, discount) => {
 
 const totalCounter = data => {
     const itemsCounter = data.selectedItems.reduce((acc, cur) => acc + cur.quantity, 0)
-    const total = data.selectedItems.reduce((acc, cur) => acc + (cur.price * cur.quantity) * itemsCounter, 0)
-    const totalDiscount = data.selectedItems.reduce((acc, cur) => acc + discountCounter(cur.price, cur.discount), 0)
+    const totalDiscount = data.selectedItems.reduce((acc, cur) => acc + ((cur.price -  discountCounter(cur.price, cur.discount)) * cur.quantity ), 0)
+    const total = (data.selectedItems.reduce((acc, cur) => acc + (cur.price * cur.quantity) , 0)) - totalDiscount
+
     return { itemsCounter, total, totalDiscount }
 }
 

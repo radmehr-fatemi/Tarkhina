@@ -38,7 +38,6 @@ const CartMobileDesign = () => {
             </div>
 
             <div className="CartMobileDesignFields">
-                {console.log( state.checkout )}
                 {
                     (state.checkout && state.itemsCounter === 0) ?  
                         <div className='CartMobileDesignFieldsEmpty' >
