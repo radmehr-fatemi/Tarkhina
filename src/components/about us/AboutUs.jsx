@@ -14,6 +14,7 @@ import diagramSVG from "./svg/diagram.svg";
 
 //Components
 import Footer from '../Footer';
+import ScrollToTop from '../shared/ScrollToTop';
 
 const AboutUs = () => {
     return (
@@ -65,7 +66,7 @@ const AboutUs = () => {
 
                 </div>
             </div>
-
+            <ScrollToTop />
             <Footer />
         </>
     );

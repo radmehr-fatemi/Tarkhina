@@ -21,6 +21,7 @@ import CardMenu from '../shared/CardMenu';
 
 //data
 import { foodsData } from '../../data/foodsData';
+import ScrollToTop from '../shared/ScrollToTop';
 
 const MenuMain = () => {
 
@@ -168,8 +169,8 @@ const MenuMain = () => {
                     </div>
                 </div>
 
-
             </div>
+            <ScrollToTop />
         </div>
     );
 };

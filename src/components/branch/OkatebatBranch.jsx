@@ -8,16 +8,16 @@ import styled from "./OkatebatBranch.module.scss";
 import notesSVG from "./svg/notes.svg";
 
 //Components
+import Banner from "../../components/Banner";
+import Footer from '../Footer';
 import HomePageSearch from '../HomePageSearch';
 import OkatebatBranchOffer from './OkatebatBranchOffer';
 import OkatebatBranchPopuler from './OkatebatBranchPopuler';
 import OkatebatBranchNonIranian from './OkatebatBranchNonIranian';
 import OkatebatBranchBanner from './OkatebatBranchBanner';
 import OkatebatBranchComment from './OkatebatBranchComment';
+import ScrollToTop from '../shared/ScrollToTop';
 
-//Components
-import Banner from "../../components/Banner";
-import Footer from '../Footer';
 
 const OkatebatBranch = () => {
     return (
@@ -38,6 +38,7 @@ const OkatebatBranch = () => {
             <OkatebatBranchBanner />
             <OkatebatBranchComment />
             <Footer />
+            <ScrollToTop />
         </div>
     );
 };

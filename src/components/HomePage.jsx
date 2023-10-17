@@ -10,6 +10,7 @@ import HomPageChain from './HomPageChain';
 import HomePageTerkhinehTour from './HomePageTerkhinehTour';
 import HomePageSearch from './HomePageSearch';
 import Footer from './Footer';
+import ScrollToTop from './shared/ScrollToTop';
 
 const HomePage = () => {
     return (
@@ -20,6 +21,7 @@ const HomePage = () => {
             <HomPageChain />
             <HomePageTerkhinehTour />
             <Footer />
+            <ScrollToTop />
         </div>
     );
 };
